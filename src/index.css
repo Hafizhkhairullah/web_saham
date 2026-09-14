@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────
+   TAILWIND V4 CUSTOM BREAKPOINTS
+───────────────────────────────────────── */
+@theme {
+  --breakpoint-3xl: 2560px;
+  --breakpoint-4xl: 3840px;
+}
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/inter/800.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────── */
+:root {
+  /* Colors */
+  --bg-main:        #050505;
+  --bg-secondary:   #0D0D0D;
+  --bg-card:        #111111;
+  --red-primary:    #E11D2E;
+  --red-bright:     #FF3B4D;
+  --red-dark:       #7F101D;
+  --white:          #F7F7F7;
+  --gray-light:     #B8B8B8;
+  --gray-mid:       #555555;
+  --gray-dark:      #252525;
+  --green-data:     #22C55E;
+  --red-data:       #EF4444;
+
+  /* Border */
+  --border-subtle:  rgba(255, 255, 255, 0.06);
+  --border-card:    rgba(255, 255, 255, 0.08);
+
+  /* Z-index scale */
+  --z-bg:      0;
+  --z-content: 10;
+  --z-float:   20;
+  --z-nav:     50;
+  --z-modal:   100;
+
+  /* Radius scale: all-soft */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-pill: 9999px;
+
+  /* Theme transition */
+  --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ─────────────────────────────────────────
+   LIGHT MODE TOKENS
+   Cool gray palette (not warm beige)
+───────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-main:        #F0F0F3;
+  --bg-secondary:   #FFFFFF;
+  --bg-card:        #FFFFFF;
+  /* Text inverts in light mode */
+  --white:          #111113;
+  --gray-light:     #3C3C43;
+  --gray-mid:       #8E8E93;
+  --gray-dark:      #D1D1D6;
+  /* Accent reds stay (pass contrast on light bg) */
+  --red-primary:    #C8001E;
+  --red-bright:     #E11D2E;
+  --red-dark:       #7F101D;
+  /* Data colors — darker for light bg contrast */
+  --green-data:     #16A34A;
+  --red-data:       #DC2626;
+  /* Borders */
+  --border-subtle:  rgba(0, 0, 0, 0.06);
+  --border-card:    rgba(0, 0, 0, 0.09);
+}
+
+/* ─────────────────────────────────────────
+   BASE
+───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--white);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: var(--theme-transition);
+}
+
+/* Scale base font at QHD/4K so all rem units grow proportionally */
+@media (min-width: 2560px) {
+  html { font-size: 20px; }
+}
+@media (min-width: 3840px) {
+  html { font-size: 26px; }
+}
+
+/* Remove default margin */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* Monospace for market numbers */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', ui-monospace, monospace;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--red-bright);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gray-dark);
+  border-radius: var(--radius-pill);
+}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────── */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333333%); }
+}
+.animate-ticker {
+  animation: ticker 25s linear infinite;
+  will-change: transform;
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes float-mid {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-4px); }
+}
+
+@keyframes chart-draw {
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.15; }
+  50%       { opacity: 0.25; }
+}
+
+/* Reduced motion override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   UTILITIES
+───────────────────────────────────────── */
+
+/* Smooth all theme-sensitive properties */
+*,
+*::before,
+*::after {
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+/* But don't override animation transitions */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+.glass-card {
+  background: rgba(13, 13, 13, 0.8);
+  border: 1px solid var(--border-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+[data-theme="light"] .glass-card-light {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.red-glow-shadow {
+  box-shadow: 0 0 24px rgba(225, 29, 46, 0.25), 0 0 48px rgba(225, 29, 46, 0.1);
+}
+[data-theme="light"] .red-glow-shadow {
+  box-shadow: 0 0 16px rgba(200, 0, 30, 0.15), 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.text-gradient-red {
+  background: linear-gradient(135deg, var(--red-bright), var(--red-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Number / price display */
+.price-up   { color: var(--green-data); }
+.price-down { color: var(--red-data); }
+
+/* ─────────────────────────────────────────
+   GSAP SCROLL ANIMATION — INITIAL STATES
+   Prevent flash (FOUC) before GSAP initializes.
+   GSAP will override these via gsap.set() / gsap.to().
+───────────────────────────────────────── */
+[data-gsap="about-word"],
+[data-gsap="about-para"] {
+  opacity: 0;
+}
+
+[data-gsap="about-stat"] {
+  opacity: 0;
+}
+
+[data-gsap="about-robot"] {
+  opacity: 0;
+}
+
+[data-gsap="edu-card"] {
+  opacity: 0;
+}
+
+[data-gsap="section-reveal"] {
+  clip-path: inset(8% 0% 0% 0%);
+}
+
+/* When reduced motion is on, show everything immediately */
+@media (prefers-reduced-motion: reduce) {
+  [data-gsap="about-word"],
+  [data-gsap="about-para"],
+  [data-gsap="about-stat"],
+  [data-gsap="about-robot"],
+  [data-gsap="edu-card"],
+  [data-gsap="section-reveal"] {
+    opacity: 1 !important;
+    clip-path: none !important;
+    transform: none !important;
+  }
+}
