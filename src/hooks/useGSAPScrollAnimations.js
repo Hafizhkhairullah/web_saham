@@ -19,7 +19,7 @@ export function useGSAPScrollAnimations() {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReduced) return
 
-    // Small delay to let DOM mount fully (Spline, charts, etc.)
+    // Small delay to let DOM mount fully (Spline, illustrations, etc.)
     const raf = requestAnimationFrame(() => {
       ctx.current = gsap.context(() => {
 
@@ -80,7 +80,6 @@ export function useGSAPScrollAnimations() {
               }
             }
           })
-
         }
 
         // ═══════════════════════════════════════
@@ -124,17 +123,17 @@ export function useGSAPScrollAnimations() {
             })
           }
 
-          // Stats: staggered pop-in
+          // Highlights: staggered pop-in
           const aboutStats = aboutSection.querySelectorAll('[data-gsap="about-stat"]')
           if (aboutStats.length > 0) {
-            gsap.set(aboutStats, { opacity: 0, y: 24, scale: 0.9 })
+            gsap.set(aboutStats, { opacity: 0, y: 24, scale: 0.96 })
             gsap.to(aboutStats, {
               opacity: 1,
               y: 0,
               scale: 1,
               duration: 0.6,
               stagger: 0.12,
-              ease: 'back.out(1.4)',
+              ease: 'power3.out',
               scrollTrigger: {
                 trigger: aboutStats[0],
                 start: 'top 85%',
@@ -163,36 +162,13 @@ export function useGSAPScrollAnimations() {
         }
 
         // ═══════════════════════════════════════
-        // 4. EDUKASI SECTION — Card stagger reveal
-        // ═══════════════════════════════════════
-        const eduSection = document.querySelector('#edukasi')
-        if (eduSection) {
-          const eduCards = eduSection.querySelectorAll('[data-gsap="edu-card"]')
-          if (eduCards.length > 0) {
-            gsap.set(eduCards, { opacity: 0, y: 40 })
-            gsap.to(eduCards, {
-              opacity: 1,
-              y: 0,
-              duration: 0.7,
-              stagger: 0.12,
-              ease: 'power3.out',
-              scrollTrigger: {
-                trigger: eduSection,
-                start: 'top 65%',
-                toggleActions: 'play none none none',
-              }
-            })
-          }
-        }
-
-        // ═══════════════════════════════════════
-        // 5. GLOBAL SECTION TRANSITIONS — clipPath reveal
+        // 4. GLOBAL SECTION TRANSITIONS — clipPath reveal
         // ═══════════════════════════════════════
         const revealSections = document.querySelectorAll('[data-gsap="section-reveal"]')
         revealSections.forEach((section) => {
           gsap.set(section, {
-            clipPath: 'inset(8% 0% 0% 0%)',
-            opacity: 0.7,
+            clipPath: 'inset(6% 0% 0% 0%)',
+            opacity: 0.75,
           })
           gsap.to(section, {
             clipPath: 'inset(0% 0% 0% 0%)',
@@ -201,7 +177,7 @@ export function useGSAPScrollAnimations() {
             scrollTrigger: {
               trigger: section,
               start: 'top 90%',
-              end: 'top 50%',
+              end: 'top 55%',
               scrub: 0.4,
             }
           })

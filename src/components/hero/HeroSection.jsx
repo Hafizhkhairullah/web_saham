@@ -6,9 +6,7 @@ import AnnouncementBadge from './AnnouncementBadge'
 import HeroContent from './HeroContent'
 import HeroActions from './HeroActions'
 import TrustIndicators from './TrustIndicators'
-import MarketDashboard from './MarketDashboard'
-import { IHSGCard, SentimentCard } from './FloatingMarketCard'
-import RiskProfileCard from './RiskProfileCard'
+import HeroIllustration from './HeroIllustration'
 
 // Stagger animation variants
 const fadeUp = (delay = 0) => ({
@@ -52,7 +50,6 @@ export default function HeroSection() {
       style={{
         minHeight: '100dvh',
         paddingTop: 'clamp(72px, 6vw, 120px)',
-        /* No background here — body provides it, so the Spline WebGL layer shows through */
       }}
       onMouseEnter={onHeroVisible}
     >
@@ -60,11 +57,11 @@ export default function HeroSection() {
       <HeroBackground />
 
       <Container className="relative py-12 lg:py-20 3xl:py-28 4xl:py-36" style={{ zIndex: 'var(--z-content)' }}>
-        {/* Two-column grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-12 lg:gap-16 3xl:gap-24 4xl:gap-32 items-center">
+        {/* Two-column grid — Equal 50:50 width with min-w-0 to prevent any text overflow */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-16 3xl:gap-24 4xl:gap-32 items-center">
 
           {/* ── Left column ── */}
-          <div className="flex flex-col gap-8 3xl:gap-12 4xl:gap-16" data-gsap="hero-left">
+          <div className="w-full min-w-0 flex flex-col gap-7 3xl:gap-12 4xl:gap-16" data-gsap="hero-left">
 
             {/* Announcement badge */}
             <motion.div {...anim(fadeUp(0))}>
@@ -87,26 +84,11 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* ── Right column ── */}
-          <div className="relative flex flex-col gap-4" data-gsap="hero-right">
-
-            {/* Main dashboard */}
-            <motion.div {...anim(fadeRight(0.15))}>
-              <MarketDashboard />
+          {/* ── Right column: Corporate Image Illustration (Equal width & precise proportion) ── */}
+          <div className="w-full min-w-0 relative" data-gsap="hero-right">
+            <motion.div {...anim(fadeRight(0.15))} className="w-full">
+              <HeroIllustration />
             </motion.div>
-
-            {/* Floating cards row — below dashboard */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              <motion.div {...anim(fadeUp(0.35))}>
-                <IHSGCard delay={0} />
-              </motion.div>
-              <motion.div {...anim(fadeUp(0.45))}>
-                <SentimentCard delay={0.6} />
-              </motion.div>
-              <motion.div {...anim(fadeUp(0.55))}>
-                <RiskProfileCard delay={1.2} />
-              </motion.div>
-            </div>
           </div>
         </div>
       </Container>

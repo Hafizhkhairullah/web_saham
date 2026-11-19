@@ -1,175 +1,237 @@
 // ─────────────────────────────────────────
 // siteContent.js
-// Konfigurasi terpusat untuk konten dan teks website.
-// Edit file ini untuk mengubah isi konten di seluruh halaman (white-label).
+// Konfigurasi terpusat untuk konten dan teks website Company Profile.
+// Edit file ini untuk mengubah isi konten di seluruh halaman.
 // ─────────────────────────────────────────
 
 export const siteContent = {
   // ── Global ──
   global: {
-    companyName: "bibit investama",
-    companyTagline: "Investasi Saham Lebih Cerdas",
+    companyName: "Bibit Investama",
+    companyTagline: "Mitra Strategis Investasi & Manajemen Portofolio Korporasi",
     logoTextPart1: "Bibit",
     logoTextPart2: "Investama",
   },
 
   // ── SEO & Meta ──
   seo: {
-    homeTitle: "BibitInvestama - Investasi Saham Lebih Cerdas",
-    homeDescription: "BibitInvestama adalah platform trading saham modern, aman, dan transparan yang didesain untuk semua level investor di Indonesia.",
+    homeTitle: "BibitInvestama - Company Profile & Portofolio Perusahaan",
+    homeDescription: "BibitInvestama adalah perusahaan manajemen investasi dan solusi strategis pasar modal yang berfokus pada pertumbuhan berkelanjutan dan tata kelola profesional.",
   },
 
   // ── Halaman Beranda (Home) ──
   home: {
     hero: {
-      badge: "Platform Trading Saham #1",
-      titlePart1: "Baca Peluang.",
-      titlePart2: "Kelola Risiko.",
-      titleHighlight: "Tumbuh Lebih Yakin.",
-      subtitle: "BibitInvestama adalah platform trading modern, transparan, dan kaya fitur yang dirancang khusus untuk membawa pengalaman investasi saham Anda ke level berikutnya.",
-      ctaPrimary: "Hubungi kami sekarang",
-      ctaSecondary: "Pelajari Fitur",
-      trustIndicators: ["Terdaftar & Diawasi oleh OJK", "Enkripsi Bank-Grade 256-bit", "99.9% Uptime Sistem"]
-    },
-    demoDashboard: {
-      headerTitle: "BibitInvestama Trading (Demo)",
-      demoTag: "Demo Mode"
+      badge: "Profil & Portofolio Korporasi",
+      titlePart1: "Mitra Strategis.",
+      titlePart2: "Solusi Terukur.",
+      titleHighlight: "Bernilai Jangka Panjang.",
+      subtitle: "BibitInvestama menghadirkan solusi manajemen portofolio, konsultasi investasi strategis, dan transformasi finansial modern yang dirancang untuk mendorong pertumbuhan bisnis serta korporasi di Indonesia.",
+      ctaPrimary: "Jelajahi Portofolio",
+      ctaSecondary: "Hubungi Kami",
+      trustIndicators: [
+        "Terdaftar & Diawasi Resmi",
+        "Tata Kelola Korporasi Transparan",
+        "Manajemen Strategis & Terukur"
+      ],
+      illustration: {
+        mainImageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=85&w=1200",
+        mainImageAlt: "Ilustrasi Gedung & Ekosistem Korporasi BibitInvestama",
+        badgeTopTitle: "Portofolio Korporasi",
+        badgeTopSubtitle: "Strategi Terintegrasi & Berkelanjutan",
+        badgeBottomTitle: "Tata Kelola Profesional",
+        badgeBottomSubtitle: "Standar Kepatuhan & Keamanan Berlapis",
+        pillars: [
+          "Manajemen Aset",
+          "Advisory Korporasi",
+          "Transformasi Finansial"
+        ]
+      }
     },
     about: {
-      badge: "Tentang Kami",
+      badge: "Tentang Perusahaan",
       title: "Mengenal Lebih Dekat",
       titleHighlight: "BibitInvestama.",
-      description: "Kami percaya bahwa akses menuju kebebasan finansial harus terbuka untuk semua. BibitInvestama hadir sebagai jembatan antara ambisi investasi Anda dan realitas pasar modal.\n\nDengan teknologi mutakhir, keamanan tingkat tinggi, dan edukasi yang mudah dipahami, kami berkomitmen untuk mendampingi setiap langkah Anda—mulai dari investor pemula hingga trader berpengalaman.",
-      stats: [
-        { value: 2, suffix: "M+", label: "Investor Aktif" },
-        { value: 99.9, suffix: "%", label: "Uptime Sistem" }
+      description: "Kami adalah perusahaan solusi investasi dan manajemen korporasi yang berkomitmen membangun ekosistem finansial yang sehat, transparan, dan berdaya saing tinggi.\n\nMelalui pendekatan berbasis riset mendalam, teknologi modern, serta tata kelola perusahaan yang kuat, BibitInvestama menjadi mitra terpercaya bagi berbagai institusi dan korporasi dalam mengoptimalkan nilai portofolio mereka.",
+      highlights: [
+        {
+          title: "Tata Kelola & Kepatuhan",
+          desc: "Menjalankan setiap inisiatif bisnis sesuai standar regulasi dan prinsip Good Corporate Governance (GCG)."
+        },
+        {
+          title: "Strategi Berbasis Riset",
+          desc: "Setiap keputusan dan pengelolaan portofolio didukung oleh analisis fundamental serta pemetaan risiko menyeluruh."
+        },
+        {
+          title: "Kemitraan Berkelanjutan",
+          desc: "Fokus pada penciptaan nilai jangka panjang bersama mitra bisnis, institusi, dan pemangku kepentingan."
+        }
       ],
       cta: "Selengkapnya Tentang Kami"
     },
-    edukasi: {
-      badge: "Edukasi",
-      title: "Mulai Perjalanan",
-      titleHighlight: "Investasi Anda",
-      subtitle: "Pelajari dasar-dasar investasi saham dengan materi yang mudah dipahami. Dari pemula hingga mahir, kami siap mendampingi Anda.",
-      cta: "Pelajari Selengkapnya",
-      cards: [
+    services: {
+      badge: "Layanan & Fokus Bisnis",
+      title: "Solusi Strategis",
+      titleHighlight: "Perusahaan",
+      subtitle: "Kami memadukan keahlian finansial, tata kelola profesional, dan inovasi teknologi untuk menghadirkan layanan terbaik bagi mitra korporasi.",
+      items: [
         {
-          title: "Apa Itu Saham?",
-          desc: "Pahami dasar-dasar pasar modal, cara kerja bursa efek, dan bagaimana saham bisa menjadi instrumen untuk membangun kekayaan jangka panjang.",
-          badgeColor: "#E11D2E",
-          imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600",
-          gradient: "red",
-          ctaText: "Mulai Belajar",
-          ctaHref: "/edukasi"
+          id: "portfolio-management",
+          title: "Manajemen Portofolio & Aset",
+          desc: "Pengelolaan alokasi aset strategis yang dirancang untuk menjaga stabilitas sekaligus memaksimalkan potensi pertumbuhan nilai investasi jangka panjang.",
+          highlights: ["Diversifikasi Sektor Strategis", "Optimalisasi Nilai Aset", "Evaluasi Kinerja Berkala"]
         },
         {
-          title: "Cara Mulai Investasi",
-          desc: "Langkah praktis dari membuka akun sekuritas, memilih saham pertama, hingga membangun portofolio yang sehat dan terdiversifikasi.",
-          badgeColor: "#4B5563",
-          imageUrl: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&q=80&w=600",
-          gradient: "gray",
-          ctaText: "Baca Panduan",
-          ctaHref: "/edukasi"
+          id: "corporate-advisory",
+          title: "Konsultasi & Advisory Korporasi",
+          desc: "Pendampingan strategis dalam perencanaan struktur finansial, ekspansi usaha, hingga kemitraan investasi antar institusi.",
+          highlights: ["Perencanaan Struktur Modal", "Uji Tuntas & Kelayakan", "Sinergi Kemitraan Bisnis"]
         },
         {
-          title: "Manajemen Risiko",
-          desc: "Pelajari teknik stop-loss, diversifikasi, dan position sizing agar investasi Anda terlindungi dari volatilitas pasar.",
-          badgeColor: "#FF2E43",
-          imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=600",
-          gradient: "darkred",
-          ctaText: "Lindungi Aset",
-          ctaHref: "/edukasi"
+          id: "digital-transformation",
+          title: "Inovasi & Infrastruktur Finansial",
+          desc: "Modernisasi ekosistem pengelolaan investasi berbasis teknologi untuk meningkatkan efisiensi, akurasi pelaporan, dan transparansi data.",
+          highlights: ["Dashboard Analitik Korporasi", "Pelaporan Real-Time", "Arsitektur Keamanan Data"]
+        },
+        {
+          id: "risk-governance",
+          title: "Manajemen Risiko & Tata Kelola",
+          desc: "Kerangka kerja mitigasi risiko komprehensif guna memastikan setiap inisiatif bisnis berjalan aman di tengah dinamika ekonomi.",
+          highlights: ["Mitigasi Risiko Pasar", "Audit & Kepatuhan Regulasi", "Keberlanjutan ESG"]
         }
       ]
     },
-    insight: {
-      badge: "Berita & Analisis",
-      title: "Market",
-      titleHighlight: "Insight",
-      subtitle: "Tetap terdepan dengan berita pasar terkini, analisis mendalam, dan tren investasi yang dikurasi oleh para ahli kami.",
-      cta: "Lihat Semua Insight"
+    portfolio: {
+      badge: "Portofolio Perusahaan",
+      title: "Rekam Jejak &",
+      titleHighlight: "Portofolio Kami",
+      subtitle: "Berbagai inisiatif strategis, proyek kolaborasi, dan pengelolaan portofolio korporasi yang telah kami jalankan bersama mitra di berbagai sektor industri.",
+      categories: [
+        "Semua",
+        "Manajemen Aset",
+        "Advisory Korporasi",
+        "Transformasi Digital",
+        "Inisiatif ESG"
+      ],
+      items: [
+        {
+          id: "port-1",
+          title: "Optimalisasi Portofolio Aset Korporasi Nasional",
+          category: "Manajemen Aset",
+          client: "Holding Industri Manufaktur & Logistik",
+          year: "2026",
+          featured: true,
+          summary: "Restrukturisasi dan pengelolaan alokasi aset multi-sektor untuk memperkuat likuiditas serta efisiensi modal kerja grup perusahaan.",
+          challenge: "Mitra menghadapi tantangan fragmentasi aset di berbagai anak perusahaan yang berdampak pada kurang optimalnya imbal hasil modal kerja.",
+          solution: "BibitInvestama merancang kerangka konsolidasi portofolio terpusat dengan strategi penyeimbangan risiko (rebalancing) berbasis kinerja sektoral.",
+          deliverables: [
+            "Kerangka Alokasi Aset Terpadu",
+            "Sistem Pemantauan Likuiditas Grup",
+            "Optimalisasi Struktur Modal Jangka Menengah"
+          ],
+          impact: "Struktur Portofolio Terkonsolidasi",
+          imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=900"
+        },
+        {
+          id: "port-2",
+          title: "Kemitraan Pembiayaan Infrastruktur Energi Bersih",
+          category: "Inisiatif ESG",
+          client: "Konsorsium Energi Terbarukan Nusantara",
+          year: "2025",
+          featured: true,
+          summary: "Pendampingan investasi dan penyusunan struktur pendanaan berkelanjutan untuk proyek pengembangan fasilitas energi ramah lingkungan.",
+          challenge: "Kebutuhan akan skema investasi jangka panjang yang memenuhi standar keberlanjutan internasional (ESG) serta menarik bagi mitra institusi.",
+          solution: "Menyusun kerangka green investment dan uji tuntas komprehensif yang menyelaraskan target finansial dengan indikator dampak lingkungan.",
+          deliverables: [
+            "Struktur Pendanaan Berbasis ESG",
+            "Laporan Kepatuhan & Dampak Berkelanjutan",
+            "Kemitraan Sindikasi Institusi"
+          ],
+          impact: "Standar Green Investment Tersertifikasi",
+          imageUrl: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80&w=900"
+        },
+        {
+          id: "port-3",
+          title: "Transformasi Platform Analitik Portofolio Institusi",
+          category: "Transformasi Digital",
+          client: "Lembaga Pengelola Dana & Investasi",
+          year: "2025",
+          featured: false,
+          summary: "Pengembangan ekosistem pelaporan dan pemantauan portofolio digital terintegrasi untuk mendukung pengambilan keputusan eksekutif.",
+          challenge: "Proses kompilasi data lintas instrumen yang sebelumnya dilakukan secara manual membutuhkan waktu lama dan rentan terhadap keterlambatan analisis.",
+          solution: "Membangun arsitektur dashboard analitik modern yang menyajikan visibilitas penuh atas eksposur risiko dan performa aset secara akurat.",
+          deliverables: [
+            "Executive Portfolio Dashboard",
+            "Otomatisasi Pelaporan Kepatuhan",
+            "Integrasi Data Multi-Instrumen"
+          ],
+          impact: "Efisiensi Pelaporan & Transparansi Penuh",
+          imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=900"
+        },
+        {
+          id: "port-4",
+          title: "Advisory Ekspansi & Akuisisi Strategis Sektor Teknologi",
+          category: "Advisory Korporasi",
+          client: "Grup Perusahaan Teknologi & Layanan Digital",
+          year: "2024",
+          featured: false,
+          summary: "Konsultasi strategis, valuasi korporasi, dan penataan struktur transaksi dalam rangka penguatan ekosistem bisnis digital di Asia Tenggara.",
+          challenge: "Menentukan valuasi yang objektif serta memitigasi risiko integrasi pasca-akuisisi di tengah dinamika industri teknologi yang bergerak cepat.",
+          solution: "Melakukan kajian komersial mendalam, pemodelan skenario finansial, serta pendampingan negosiasi strategis hingga tahap penyelesaian transaksi.",
+          deliverables: [
+            "Kajian Valuasi & Uji Tuntas Finansial",
+            "Perencanaan Sinergi Pasca-Akuisisi",
+            "Tata Kelola Transaksi Korporasi"
+          ],
+          impact: "Integrasi Bisnis Strategis Berjalan Mulus",
+          imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=900"
+        },
+        {
+          id: "port-5",
+          title: "Pengembangan Strategi Investasi Dana Abadi & Yayasan",
+          category: "Manajemen Aset",
+          client: "Yayasan Pendidikan & Riset Nasional",
+          year: "2024",
+          featured: false,
+          summary: "Perancangan kebijakan investasi berprofil risiko terukur guna menjaga nilai pokok dana abadi sekaligus menghasilkan arus kas berkelanjutan.",
+          challenge: "Menjaga keseimbangan antara pelestarian modal jangka panjang dan kebutuhan pendanaan operasional program sosial tahunan.",
+          solution: "Menetapkan kebijakan alokasi aset berimbang dengan instrumen berpendapatan tetap berkualitas tinggi serta tata kelola komite investasi.",
+          deliverables: [
+            "Dokumen Kebijakan Investasi (IPS)",
+            "Tata Kelola Komite Investasi",
+            "Strategi Pelestarian Modal Jangka Panjang"
+          ],
+          impact: "Keberlanjutan Pendanaan Jangka Panjang",
+          imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=900"
+        },
+        {
+          id: "port-6",
+          title: "Modernisasi Kerangka Manajemen Risiko Korporasi",
+          category: "Advisory Korporasi",
+          client: "Perusahaan Jasa Keuangan & Pembiayaan",
+          year: "2024",
+          featured: false,
+          summary: "Pembaruan menyeluruh atas sistem pengendalian internal dan kerangka mitigasi risiko pasar sesuai regulasi terbaru.",
+          challenge: "Kebutuhan penyesuaian standar manajemen risiko perusahaan terhadap perkembangan regulasi industri jasa keuangan yang semakin ketat.",
+          solution: "Merumuskan matriks risiko korporasi, prosedur stress-testing berkala, serta penguatan fungsi kepatuhan lintas departemen.",
+          deliverables: [
+            "Kerangka Enterprise Risk Management (ERM)",
+            "Prosedur Evaluasi & Stress-Testing",
+            "Pedoman Tata Kelola & Kepatuhan"
+          ],
+          impact: "Kepatuhan Regulasi & Mitigasi Risiko Optimal",
+          imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=900"
+        }
+      ]
     },
     kontak: {
-      badge: "Kontak",
-      title: "Punya",
-      titleHighlight: "Pertanyaan?",
-      subtitle: "Tim kami siap membantu Anda. Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau butuh bantuan lebih lanjut.",
-      ctaPrimary: "Chat via WhatsApp",
+      badge: "Kontak & Kemitraan",
+      title: "Mari Bangun",
+      titleHighlight: "Kolaborasi Strategis",
+      subtitle: "Tim kami siap mendiskusikan kebutuhan korporasi dan strategi portofolio perusahaan Anda. Hubungi kami untuk menjadwalkan sesi konsultasi.",
+      ctaPrimary: "Diskusi via WhatsApp",
       ctaSecondary: "Ke Halaman Kontak"
     }
-  },
-
-  // ── Halaman Insight ──
-  insight: {
-    hero: {
-      badge: "Market Insight",
-      title: "Berita & Analisis",
-      titleHighlight: "Pasar",
-      subtitle: "Pandangan mendalam mengenai pergerakan pasar, analisis tren, dan berita ekonomi terkini untuk membantu keputusan investasi Anda.",
-      back: "Kembali ke Beranda"
-    },
-    articles: [
-      {
-        id: 1,
-        category: "Analisis Pasar",
-        date: "14 Sep 2026",
-        title: "IHSG Diprediksi Tembus 8.000, Sektor Perbankan Memimpin",
-        excerpt: "Bursa Efek Indonesia menunjukkan tren positif didorong oleh laporan keuangan kuartal ketiga yang solid dari bank-bank besar.",
-        imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800",
-        author: "Budi Santoso",
-        readTime: "5 min read"
-      },
-      {
-        id: 2,
-        category: "Ekonomi Makro",
-        date: "13 Sep 2026",
-        title: "Kebijakan Suku Bunga BI Bertahan, Dampaknya Bagi Emiten Properti",
-        excerpt: "Bank Indonesia memutuskan untuk menahan suku bunga acuan. Bagaimana hal ini mempengaruhi sektor properti di kuartal akhir?",
-        imageUrl: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&q=80&w=800",
-        author: "Siti Rahma",
-        readTime: "4 min read"
-      },
-      {
-        id: 3,
-        category: "Tips Investasi",
-        date: "12 Sep 2026",
-        title: "Strategi Rotasi Sektor di Tengah Volatilitas Global",
-        excerpt: "Menghadapi ketidakpastian geopolitik, investor disarankan untuk mulai mengalihkan portofolio ke sektor defensif seperti barang konsumsi.",
-        imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=800",
-        author: "Andi Wijaya",
-        readTime: "6 min read"
-      },
-      {
-        id: 4,
-        category: "Berita Emiten",
-        date: "11 Sep 2026",
-        title: "GOTO Umumkan Kemitraan Strategis Baru, Saham Melonjak 15%",
-        excerpt: "Kolaborasi dengan perusahaan teknologi global membawa sentimen positif yang signifikan pada perdagangan saham hari ini.",
-        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-        author: "Reza Pratama",
-        readTime: "3 min read"
-      },
-      {
-        id: 5,
-        category: "Tren Global",
-        date: "10 Sep 2026",
-        title: "Dampak Pemilu AS Terhadap Pasar Modal Berkembang",
-        excerpt: "Analisis historis menunjukkan volatilitas pasar sering meningkat menjelang pemilihan umum di negara dengan ekonomi terbesar.",
-        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800",
-        author: "Diana Fitri",
-        readTime: "7 min read"
-      },
-      {
-        id: 6,
-        category: "Edukasi",
-        date: "09 Sep 2026",
-        title: "Memahami Pola Head and Shoulders dalam Analisis Teknikal",
-        excerpt: "Pola pembalikan tren ini adalah salah satu indikator paling andal bagi trader untuk memprediksi penurunan harga.",
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-        author: "Budi Santoso",
-        readTime: "5 min read"
-      }
-    ]
   },
 
   // ── Halaman Tentang Kami ──
@@ -178,242 +240,96 @@ export const siteContent = {
       badge: "Tentang Kami",
       title: "Mengenal Lebih Dekat",
       titleHighlight: "BibitInvestama",
-      subtitle: "Membangun jembatan antara ambisi finansial Anda dan peluang pasar modal Indonesia. Kami hadir untuk memberdayakan setiap investor."
+      subtitle: "Mitra strategis dalam pengelolaan portofolio, solusi korporasi, dan pertumbuhan investasi berkelanjutan di Indonesia."
     },
     perusahaan: {
-      badge: "Profil",
-      title: "Tentang",
-      titleHighlight: "Perusahaan",
+      badge: "Profil Perusahaan",
+      title: "Identitas &",
+      titleHighlight: "Dedikasi Kami",
       paragraphs: [
-        "{COMPANY_NAME} adalah perusahaan teknologi finansial yang berdedikasi untuk mendemokratisasi akses pasar modal Indonesia. Didirikan dengan visi bahwa setiap orang berhak memiliki kesempatan yang sama untuk membangun kekayaan melalui investasi.",
-        "Kami menggabungkan teknologi terdepan dengan pendekatan yang berpusat pada pengguna untuk menciptakan platform trading dan investasi yang aman, transparan, dan mudah digunakan — baik untuk investor pemula maupun profesional berpengalaman.",
-        "Terdaftar dan diawasi oleh Otoritas Jasa Keuangan (OJK), {COMPANY_NAME} berkomitmen penuh pada keamanan dana nasabah, kepatuhan regulasi, dan transparansi dalam setiap layanan yang kami berikan."
+        "{COMPANY_NAME} adalah perusahaan manajemen investasi dan konsultasi finansial yang berfokus pada penciptaan nilai jangka panjang bagi mitra korporasi maupun institusi di Indonesia.",
+        "Kami memadukan keahlian analisis pasar, teknologi finansial modern, serta tata kelola perusahaan yang transparan untuk menghadirkan solusi portofolio yang terukur dan adaptif terhadap perkembangan ekonomi.",
+        "Berlandaskan kepatuhan terhadap regulasi Otoritas Jasa Keuangan (OJK), {COMPANY_NAME} senantiasa menjunjung tinggi integritas, akuntabilitas, dan standar profesionalisme dalam setiap kemitraan strategis yang kami jalankan."
       ],
-      stats: [
-        { value: "2M+", label: "Investor Aktif" },
-        { value: "99.9%", label: "Uptime Sistem" },
-        { value: "24/7", label: "Dukungan Nasabah" },
-        { value: "150+", label: "Produk Investasi" }
+      pillars: [
+        {
+          title: "Kepatuhan & Integritas",
+          desc: "Beroperasi dengan standar tata kelola perusahaan yang baik (GCG) serta kepatuhan penuh terhadap regulasi."
+        },
+        {
+          title: "Keunggulan Portofolio",
+          desc: "Pendekatan pengelolaan aset yang disiplin, terdiversifikasi, dan berorientasi pada ketahanan nilai jangka panjang."
+        },
+        {
+          title: "Inovasi Berkelanjutan",
+          desc: "Mengintegrasikan teknologi analitik modern untuk mendukung ketepatan pengambilan keputusan strategis."
+        },
+        {
+          title: "Sinergi Kemitraan",
+          desc: "Membangun hubungan kolaboratif yang erat dengan berbagai pemangku kepentingan lintas sektor industri."
+        }
       ]
     },
     visiMisi: {
-      badge: "Tujuan",
+      badge: "Arah Strategis",
       title: "Visi &",
       titleHighlight: "Misi",
-      visi: "Menjadi platform investasi digital terdepan di Indonesia yang memberdayakan setiap individu untuk mencapai kebebasan finansial melalui akses pasar modal yang inklusif, transparan, dan terpercaya.",
+      visi: "Menjadi perusahaan manajemen investasi dan mitra strategis korporasi terkemuka di Indonesia yang mendorong pertumbuhan ekonomi berkelanjutan melalui tata kelola yang transparan, inovatif, dan terpercaya.",
       misi: [
-        "Menyediakan platform investasi yang mudah digunakan dengan biaya terjangkau untuk semua kalangan.",
-        "Memberikan edukasi finansial berkualitas untuk meningkatkan literasi investasi masyarakat Indonesia.",
-        "Menghadirkan teknologi inovatif yang membantu investor mengambil keputusan yang lebih cerdas.",
-        "Menjaga standar keamanan dan kepatuhan tertinggi demi melindungi kepentingan nasabah."
+        "Menghadirkan solusi pengelolaan portofolio dan konsultasi strategis yang memberikan nilai tambah nyata bagi mitra.",
+        "Menerapkan standar manajemen risiko dan tata kelola perusahaan tertinggi dalam setiap aspek operasional.",
+        "Mengembangkan inovasi teknologi finansial yang meningkatkan efisiensi dan transparansi pengelolaan aset.",
+        "Membangun ekosistem kemitraan jangka panjang yang berkontribusi positif terhadap pembangunan ekonomi nasional."
       ]
     },
     nilai: {
-      badge: "Prinsip",
+      badge: "Prinsip Korporasi",
       title: "Nilai-Nilai",
       titleHighlight: "Kami",
-      subtitle: "Prinsip-prinsip yang menjadi fondasi setiap keputusan dan layanan yang kami berikan.",
+      subtitle: "Prinsip utama yang menjadi fondasi budaya kerja, pengambilan keputusan, dan komitmen kami kepada setiap mitra.",
       items: [
-        { title: "Keamanan", desc: "Keamanan dana dan data nasabah adalah prioritas utama. Sistem kami dilindungi enkripsi end-to-end dan pemantauan 24/7." },
-        { title: "Inovasi", desc: "Kami terus berinovasi menghadirkan fitur dan teknologi baru yang memudahkan perjalanan investasi Anda." },
-        { title: "Transparansi", desc: "Tidak ada biaya tersembunyi. Setiap transaksi dan informasi disajikan secara jelas dan mudah dipahami." },
-        { title: "Inklusivitas", desc: "Platform kami dirancang untuk semua — dari investor pemula hingga profesional, dari Sabang sampai Merauke." }
+        { title: "Integritas", desc: "Menjaga kepercayaan mitra melalui kejujuran, etika profesional, dan kepatuhan ketat terhadap standar regulasi." },
+        { title: "Inovasi", desc: "Terus mengembangkan metode analisis dan pemanfaatan teknologi untuk menghadirkan solusi finansial yang relevan." },
+        { title: "Transparansi", desc: "Menyajikan pelaporan, kajian risiko, dan tata kelola portofolio secara terbuka, objektif, dan akuntabel." },
+        { title: "Keberlanjutan", desc: "Mengutamakan pertumbuhan jangka panjang yang bertanggung jawab serta memberikan dampak positif bagi ekosistem bisnis." }
       ]
     },
     timeline: {
-      badge: "Sejarah",
+      badge: "Rekam Jejak",
       title: "Perjalanan",
-      titleHighlight: "Kami",
-      subtitle: "Dari startup kecil hingga platform investasi terdepan di Indonesia.",
+      titleHighlight: "Perusahaan",
+      subtitle: "Tonggak sejarah pertumbuhan dan transformasi {COMPANY_NAME} dalam membangun portofolio korporasi yang tangguh.",
       items: [
-        { year: "2019", title: "Pendirian {COMPANY_NAME}", desc: "Bermula dari keinginan untuk membuat investasi saham lebih mudah diakses oleh seluruh masyarakat Indonesia." },
-        { year: "2020", title: "Peluncuran Platform Beta", desc: "Peluncuran versi beta dengan fitur trading saham dasar. Mendapatkan 10.000 pengguna pertama dalam 3 bulan." },
-        { year: "2021", title: "Lisensi OJK & Ekspansi Produk", desc: "Resmi terdaftar dan diawasi OJK. Menambahkan fitur reksadana, obligasi, dan analisis pasar real-time." },
-        { year: "2022", title: "1 Juta Pengguna", desc: "Meraih milestone 1 juta investor aktif. Meluncurkan fitur edukasi interaktif dan portofolio otomatis." },
-        { year: "2023", title: "Inovasi AI & Mobile", desc: "Memperkenalkan analisis berbasis AI dan rekomendasi saham personal. Aplikasi mobile mendapat rating 4.8/5." },
-        { year: "2024", title: "2 Juta+ Investor", desc: "Melampaui 2 juta investor aktif. Memperluas layanan ke saham global dan kripto regulasi." }
+        { year: "2019", title: "Pendirian {COMPANY_NAME}", desc: "Didirikan dengan fokus awal pada riset pasar modal dan konsultasi strategis bagi pelaku usaha nasional." },
+        { year: "2020", title: "Pengembangan Sistem Analitik Portofolio", desc: "Meluncurkan kerangka kerja manajemen portofolio berbasis data untuk meningkatkan akurasi pemetaan risiko." },
+        { year: "2021", title: "Penguatan Tata Kelola & Lisensi Resmi", desc: "Memperkuat struktur kepatuhan regulasi dan memperluas cakupan layanan manajemen aset korporasi." },
+        { year: "2022", title: "Ekspansi Kemitraan Lintas Industri", desc: "Menjalin kolaborasi strategis dengan berbagai korporasi di sektor manufaktur, infrastruktur, dan teknologi." },
+        { year: "2023", title: "Integrasi Prinsip Investasi Berkelanjutan (ESG)", desc: "Mengadopsi kerangka penilaian keberlanjutan dalam penyusunan portofolio dan proyek pembiayaan strategis." },
+        { year: "2024 - Kini", title: "Transformasi Ekosistem Portofolio Korporasi", desc: "Memperkokoh posisi sebagai mitra strategis pengelolaan aset dan solusi korporasi terintegrasi di Indonesia." }
       ]
     },
     tim: {
-      badge: "Tim",
-      title: "Tim",
-      titleHighlight: "Kami",
-      subtitle: "Dipimpin oleh para profesional berpengalaman di bidang keuangan dan teknologi.",
+      badge: "Kepemimpinan",
+      title: "Jajaran",
+      titleHighlight: "Manajemen",
+      subtitle: "Dipimpin oleh para profesional berpengalaman di bidang manajemen investasi, tata kelola korporasi, dan teknologi.",
       items: [
-        { name: "Adi Pratama", role: "CEO & Founder", initial: "AP" },
-        { name: "Sari Dewi", role: "CTO", initial: "SD" },
-        { name: "Budi Santoso", role: "CFO", initial: "BS" },
-        { name: "Lina Wijaya", role: "Head of Product", initial: "LW" },
-        { name: "Reza Firmansyah", role: "Head of Engineering", initial: "RF" },
-        { name: "Maya Putri", role: "Head of Compliance", initial: "MP" },
-        { name: "Dika Hermawan", role: "Head of Marketing", initial: "DH" },
-        { name: "Nadia Kusuma", role: "Head of Education", initial: "NK" }
+        { name: "Adi Pratama", role: "Chief Executive Officer", initial: "AP" },
+        { name: "Sari Dewi", role: "Chief Technology Officer", initial: "SD" },
+        { name: "Budi Santoso", role: "Chief Financial Officer", initial: "BS" },
+        { name: "Lina Wijaya", role: "Head of Portfolio Management", initial: "LW" },
+        { name: "Reza Firmansyah", role: "Head of Corporate Advisory", initial: "RF" },
+        { name: "Maya Putri", role: "Head of Risk & Compliance", initial: "MP" },
+        { name: "Dika Hermawan", role: "Head of Strategic Partnership", initial: "DH" },
+        { name: "Nadia Kusuma", role: "Head of ESG & Research", initial: "NK" }
       ]
     },
     cta: {
-      title: "Bergabung Bersama",
-      titleHighlight: "Kami",
-      subtitle: "Jadilah bagian dari 2 juta+ investor yang telah mempercayakan perjalanan finansialnya bersama {COMPANY_NAME}.",
-      primary: "Mulai Investasi",
-      secondary: "Kembali ke Beranda"
-    }
-  },
-
-  // ── Halaman Edukasi ──
-  edukasi: {
-    hero: {
-      badge: "Pusat Edukasi",
-      title: "Edukasi",
-      titleHighlight: "Pasar Saham",
-      subtitle: "Panduan lengkap untuk memahami dunia investasi saham — dari konsep dasar hingga strategi lanjutan. Tingkatkan literasi finansial Anda bersama {COMPANY_NAME}.",
-      back: "Kembali ke Beranda"
-    },
-    sections: [
-      {
-        badge: "Dasar",
-        title: "Apa Itu",
-        titleHighlight: "Saham?",
-        subtitle: "Saham adalah bukti kepemilikan atas suatu perusahaan. Ketika Anda membeli saham, Anda menjadi salah satu pemilik perusahaan tersebut dan berhak atas sebagian keuntungannya.",
-        cards: [
-          {
-            title: "Saham Biasa (Common Stock)",
-            desc: "Memberikan hak suara dalam RUPS dan hak atas dividen. Pemilik menanggung risiko paling tinggi tetapi juga berpotensi mendapat keuntungan paling besar.",
-            badgeColor: "#E11D2E",
-            imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600",
-            gradient: "red",
-            ctaText: "Pelajari Lebih Lanjut",
-            ctaHref: "#"
-          },
-          {
-            title: "Saham Preferen (Preferred Stock)",
-            desc: "Mendapat prioritas pembagian dividen sebelum pemegang saham biasa. Cocok untuk investor yang menginginkan pendapatan tetap dari dividen.",
-            badgeColor: "#4B5563",
-            imageUrl: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&q=80&w=600",
-            gradient: "gray",
-            ctaText: "Pelajari Lebih Lanjut",
-            ctaHref: "#"
-          },
-          {
-            title: "Cara Kerja Bursa Efek",
-            desc: "Bursa Efek Indonesia (BEI) adalah tempat jual-beli saham secara resmi. Transaksi dilakukan melalui perusahaan sekuritas yang terdaftar dan diawasi OJK.",
-            badgeColor: "#FF2E43",
-            imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=600",
-            gradient: "darkred",
-            ctaText: "Pelajari Lebih Lanjut",
-            ctaHref: "#"
-          }
-        ]
-      },
-      {
-        badge: "Analisis",
-        title: "Fundamental vs",
-        titleHighlight: "Teknikal",
-        subtitle: "Dua pendekatan utama dalam menganalisis saham. Keduanya memiliki kelebihan dan bisa dikombinasikan.",
-        cards: [
-          {
-            title: "Analisis Fundamental",
-            desc1: "Fokus:", desc1Val: "Nilai intrinsik perusahaan",
-            desc2: "Mempelajari laporan keuangan, pendapatan, laba bersih, rasio P/E, ROE, dan prospek bisnis perusahaan untuk menentukan apakah harga saham undervalued atau overvalued.",
-            desc3: "Cocok untuk:", desc3Val: "Investor jangka panjang yang mencari saham dengan nilai baik.",
-            badgeColor: "#E11D2E",
-            imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-            gradient: "red",
-            ctaText: "Pelajari Analisis Fundamental",
-            ctaHref: "#"
-          },
-          {
-            title: "Analisis Teknikal",
-            desc1: "Fokus:", desc1Val: "Pola pergerakan harga & volume",
-            desc2: "Menggunakan grafik (chart), indikator seperti Moving Average, RSI, MACD, dan pola candlestick untuk memprediksi arah pergerakan harga saham.",
-            desc3: "Cocok untuk:", desc3Val: "Trader aktif yang mencari peluang jangka pendek hingga menengah.",
-            badgeColor: "#4B5563",
-            imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600",
-            gradient: "gray",
-            ctaText: "Pelajari Analisis Teknikal",
-            ctaHref: "#"
-          }
-        ]
-      },
-      {
-        badge: "Proteksi",
-        title: "Manajemen",
-        titleHighlight: "Risiko",
-        subtitle: "Kunci sukses investasi bukan hanya soal memilih saham yang benar, tapi juga mengelola risiko dengan bijak.",
-        cards: [
-          {
-            title: "Stop-Loss",
-            desc: "Tentukan batas kerugian maksimal sebelum membeli. Misalnya, jual otomatis jika harga turun 5-10% dari harga beli. Ini melindungi modal Anda dari kerugian besar.",
-            badgeColor: "#E11D2E",
-            imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=600",
-            gradient: "red",
-            ctaText: "Strategi Proteksi",
-            ctaHref: "#"
-          },
-          {
-            title: "Diversifikasi",
-            desc: "Sebarkan investasi ke berbagai sektor dan instrumen. Jangan menaruh lebih dari 20% portofolio di satu saham. Kombinasikan saham dengan obligasi atau reksadana.",
-            badgeColor: "#4B5563",
-            imageUrl: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&q=80&w=600",
-            gradient: "gray",
-            ctaText: "Strategi Proteksi",
-            ctaHref: "#"
-          },
-          {
-            title: "Position Sizing",
-            desc: "Atur ukuran posisi berdasarkan tingkat risiko. Pemula disarankan mengalokasikan maksimal 2-5% dari total portofolio per transaksi untuk membatasi risiko.",
-            badgeColor: "#FF2E43",
-            imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
-            gradient: "darkred",
-            ctaText: "Strategi Proteksi",
-            ctaHref: "#"
-          }
-        ]
-      }
-    ],
-    panduan: {
-      badge: "Panduan",
-      title: "Cara Mulai",
-      titleHighlight: "Investasi",
-      subtitle: "Memulai investasi saham lebih mudah dari yang Anda bayangkan. Ikuti langkah-langkah berikut untuk memulai perjalanan Anda.",
-      steps: [
-        { title: "Buka Rekening Efek", desc: "Pilih perusahaan sekuritas terpercaya seperti {COMPANY_NAME}. Siapkan KTP, NPWP, dan buku tabungan. Proses pembukaan akun bisa dilakukan sepenuhnya secara online." },
-        { title: "Deposit Dana", desc: "Transfer dana ke Rekening Dana Nasabah (RDN) Anda. Mulai dengan jumlah yang nyaman — tidak harus besar. Minimum pembelian saham adalah 1 lot (100 lembar)." },
-        { title: "Pelajari & Analisis", desc: "Gunakan fitur riset dan analisis di platform {COMPANY_NAME} untuk mempelajari saham yang ingin Anda beli. Perhatikan fundamental perusahaan dan tren harga." },
-        { title: "Beli Saham Pertama", desc: "Masukkan order beli melalui aplikasi trading. Pilih saham blue chip untuk awal yang lebih aman. Pantau investasi Anda secara berkala, bukan setiap menit." },
-        { title: "Evaluasi & Berkembang", desc: "Review portofolio secara berkala. Pelajari dari setiap transaksi dan terus tingkatkan pengetahuan Anda tentang pasar modal." }
-      ],
-      tipsTitle: "Tips untuk Pemula",
-      tips: [
-        "Mulai dengan dana yang siap Anda \"relakan\" — jangan gunakan dana darurat.",
-        "Investasi rutin (dollar-cost averaging) lebih baik daripada mencoba menebak waktu pasar.",
-        "Diversifikasi — jangan taruh semua telur di satu keranjang.",
-        "Saham blue chip (LQ45) cocok untuk pemula karena lebih stabil.",
-        "Selalu lakukan riset sendiri sebelum membeli (DYOR)."
-      ]
-    },
-    glosarium: {
-      badge: "Referensi",
-      title: "Glosarium",
-      titleHighlight: "Pasar Saham",
-      subtitle: "Istilah-istilah penting yang perlu Anda ketahui saat berinvestasi di pasar modal.",
-      items: [
-        { term: "IHSG", def: "Indeks Harga Saham Gabungan — indikator pergerakan seluruh saham yang tercatat di BEI." },
-        { term: "Lot", def: "Satuan perdagangan saham. 1 lot = 100 lembar saham." },
-        { term: "Bid/Ask", def: "Bid adalah harga beli tertinggi, Ask adalah harga jual terendah yang ditawarkan di pasar." },
-        { term: "Dividen", def: "Bagian laba perusahaan yang dibagikan kepada pemegang saham." },
-        { term: "Capital Gain", def: "Keuntungan dari selisih harga beli dan harga jual saham." },
-        { term: "Blue Chip", def: "Saham perusahaan besar dengan fundamental kuat dan likuiditas tinggi." },
-        { term: "P/E Ratio", def: "Price to Earnings Ratio — perbandingan harga saham dengan laba per lembar saham." },
-        { term: "ROE", def: "Return on Equity — rasio laba bersih terhadap ekuitas pemegang saham." },
-        { term: "Market Cap", def: "Kapitalisasi pasar — total nilai seluruh saham perusahaan yang beredar." }
-      ]
-    },
-    cta: {
-      title: "Siap Mulai",
-      titleHighlight: "Investasi?",
-      subtitle: "Buka akun di {COMPANY_NAME} dan mulai perjalanan investasi Anda hari ini. Proses cepat, aman, dan didampingi sepanjang perjalanan.",
-      primary: "Buka Akun Sekarang",
-      secondary: "Kembali ke Beranda"
+      title: "Siap Berkolaborasi Bersama",
+      titleHighlight: "Kami?",
+      subtitle: "Pelajari lebih lanjut bagaimana {COMPANY_NAME} dapat mendukung pencapaian tujuan strategis dan optimalisasi portofolio perusahaan Anda.",
+      primary: "Lihat Portofolio Kami",
+      secondary: "Hubungi Tim Kami"
     }
   },
 
@@ -423,58 +339,60 @@ export const siteContent = {
       badge: "Hubungi Kami",
       title: "Mari",
       titleHighlight: "Terhubung",
-      subtitle: "Punya pertanyaan atau butuh bantuan? Tim kami siap membantu Anda kapan saja.",
+      subtitle: "Ingin mendiskusikan kemitraan strategis atau mengenal portofolio perusahaan kami lebih jauh? Tim kami siap melayani Anda.",
       back: "Kembali ke Beranda"
     },
     info: {
-      whatsappNumber: "6281234567890", // Ganti dengan nomor yang sesuai
-      email: "support@bibitinvestama.com",
+      whatsappNumber: "6281234567890",
+      email: "corporate@bibitinvestama.com",
       address: "Jl. Jend. Sudirman Kav. 52-53, Jakarta Selatan, 12190"
     },
     form: {
-      title: "Kirimkan Pesan",
-      nameLabel: "Nama Lengkap",
-      namePlaceholder: "Masukkan nama Anda",
-      emailLabel: "Alamat Email",
-      emailPlaceholder: "nama@email.com",
-      messageLabel: "Pesan",
-      messagePlaceholder: "Tulis pesan Anda di sini...",
+      title: "Kirimkan Pesan Kemitraan",
+      nameLabel: "Nama Lengkap / Perusahaan",
+      namePlaceholder: "Masukkan nama Anda atau instansi",
+      emailLabel: "Alamat Email Bisnis",
+      emailPlaceholder: "nama@perusahaan.com",
+      messageLabel: "Detail Kebutuhan / Pesan",
+      messagePlaceholder: "Ceritakan kebutuhan kolaborasi atau pertanyaan Anda di sini...",
       submitBtn: "Kirim Pesan"
     },
     whatsappBtn: {
-      text: "Chat via WhatsApp",
-      message: "Halo, saya ingin bertanya mengenai layanan BibitInvestama."
+      text: "Diskusi via WhatsApp",
+      message: "Halo Tim BibitInvestama, saya ingin berdiskusi mengenai profil dan portofolio layanan perusahaan."
     }
   },
 
   // ── Footer ──
   footer: {
-    description: "Platform trading saham modern, aman, dan transparan yang didesain untuk semua level investor di Indonesia.",
+    description: "Mitra strategis manajemen portofolio, konsultasi investasi korporasi, dan solusi transformasi finansial yang berorientasi pada pertumbuhan jangka panjang.",
     links: [
       {
         title: "Perusahaan",
         items: [
+          { label: "Beranda", href: "/" },
           { label: "Tentang Kami", href: "/tentang" },
-          { label: "Karir", href: "#" },
+          { label: "Layanan Strategis", href: "/#layanan" },
+          { label: "Portofolio", href: "/#portofolio" },
           { label: "Hubungi Kami", href: "/kontak" }
         ]
       },
       {
-        title: "Layanan",
+        title: "Fokus Portofolio",
         items: [
-          { label: "Trading Saham", href: "#" },
-          { label: "Reksadana", href: "#" },
-          { label: "Edukasi", href: "/edukasi" },
-          { label: "Market Insight", href: "/insight" }
+          { label: "Manajemen Aset", href: "/#portofolio" },
+          { label: "Advisory Korporasi", href: "/#portofolio" },
+          { label: "Transformasi Digital", href: "/#portofolio" },
+          { label: "Inisiatif ESG", href: "/#portofolio" }
         ]
       },
       {
-        title: "Bantuan & Legal",
+        title: "Tata Kelola & Legal",
         items: [
-          { label: "Pusat Bantuan", href: "#" },
+          { label: "Komitmen Kepatuhan", href: "/tentang" },
           { label: "Syarat & Ketentuan", href: "#" },
           { label: "Kebijakan Privasi", href: "#" },
-          { label: "Peringatan Risiko", href: "#" }
+          { label: "Manajemen Risiko", href: "/tentang" }
         ]
       }
     ],

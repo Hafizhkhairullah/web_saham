@@ -1,16 +1,34 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import HeroSection from '../components/hero/HeroSection'
 import MarketTickerDivider from '../components/shared/MarketTickerDivider'
 import AboutSection from '../components/about/AboutSection'
-import EdukasiSection from '../components/edukasi/EdukasiSection'
-import InsightSection from '../components/insight/InsightSection'
+import ServicesSection from '../components/portfolio/ServicesSection'
+import PortfolioSection from '../components/portfolio/PortfolioSection'
 import KontakSection from '../components/kontak/KontakSection'
 import Footer from '../components/layout/Footer'
 import { useGSAPScrollAnimations } from '../hooks/useGSAPScrollAnimations'
 
 export default function HomePage() {
+  const location = useLocation()
+
   // Initialize all GSAP ScrollTrigger animations
   useGSAPScrollAnimations()
+
+  // Smooth scroll to section if URL has a hash (e.g. /#portofolio)
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '')
+      const timer = setTimeout(() => {
+        const el = document.getElementById(targetId)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [location.hash])
 
   return (
     <main>
@@ -18,11 +36,9 @@ export default function HomePage() {
       <HeroSection />
       <MarketTickerDivider />
       <AboutSection />
-      <EdukasiSection />
-      <InsightSection />
+      <ServicesSection />
+      <PortfolioSection />
       <KontakSection />
-      {/* <ProductsSection /> */}
-      {/* <StatsSection /> */}
       <Footer />
     </main>
   )

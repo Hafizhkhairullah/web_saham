@@ -4,18 +4,18 @@ import { siteContent, parseText } from '../../config/siteContent'
 
 /**
  * Hero headline + supporting copy.
- * h1 with italic+red emphasis on last phrase.
- * Font size: 64-76px desktop, 38-44px mobile.
+ * Responsive font size & word-wrapping so headline never overflows into the right column.
  */
 export default function HeroContent() {
   const reduced = useReducedMotion()
   const highlightText = siteContent.home.hero.titleHighlight
+  const highlightWords = highlightText.split(' ')
 
   const containerVariants = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.04, delayChildren: 0.6 }
+      transition: { staggerChildren: 0.035, delayChildren: 0.4 }
     }
   }
 
@@ -28,39 +28,42 @@ export default function HeroContent() {
   }
 
   return (
-    <div className="flex flex-col gap-5">
-      {/* h1 */}
-      <h2
-        className="font-extrabold tracking-tight leading-[1.05]"
+    <div className="flex flex-col gap-5 min-w-0">
+      {/* Headline */}
+      <h1
+        className="font-extrabold tracking-tight leading-[1.12] break-words"
         style={{
-          fontSize: 'clamp(2.4rem, 5vw, 6rem)',
+          fontSize: 'clamp(2rem, 3.2vw, 3.5rem)',
           color: 'var(--white)',
         }}
       >
-        {siteContent.home.hero.titlePart1}{' '}
-        <br className="hidden sm:block" />
-        {siteContent.home.hero.titlePart2}{' '}
+        <span className="block">{siteContent.home.hero.titlePart1}</span>
+        <span className="block">{siteContent.home.hero.titlePart2}</span>
         <motion.span
-          className="italic inline-flex"
+          className="italic inline-flex flex-wrap gap-x-[0.28em]"
           style={{ color: 'var(--red-bright)', paddingBottom: '0.05em' }}
           variants={reduced ? {} : containerVariants}
           initial="hidden"
           animate="visible"
           aria-label={highlightText}
         >
-          {highlightText.split('').map((char, index) => (
-            <motion.span key={index} variants={reduced ? {} : letterVariants} aria-hidden="true">
-              {char === ' ' ? '\u00A0' : char}
-            </motion.span>
+          {highlightWords.map((word, wIdx) => (
+            <span key={wIdx} className="inline-flex whitespace-nowrap">
+              {word.split('').map((char, cIdx) => (
+                <motion.span key={cIdx} variants={reduced ? {} : letterVariants} aria-hidden="true">
+                  {char}
+                </motion.span>
+              ))}
+            </span>
           ))}
         </motion.span>
-      </h2>
+      </h1>
 
       {/* Supporting copy */}
       <p
-        className="leading-relaxed max-w-[48ch]"
+        className="leading-relaxed max-w-[52ch]"
         style={{
-          fontSize: 'clamp(1rem, 1.6vw, 1.125rem)',
+          fontSize: 'clamp(0.95rem, 1.25vw, 1.1rem)',
           color: 'var(--gray-light)',
         }}
       >

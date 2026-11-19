@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { List, X, Sun, Moon, WhatsappLogo } from '@phosphor-icons/react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Container from './Container'
 import Button from '../ui/Button'
 import { useTheme } from '../../context/ThemeContext'
@@ -9,10 +9,10 @@ import { siteContent } from '../../config/siteContent'
 
 const NAV_LINKS = [
   { label: 'Beranda', href: '/', isRoute: true },
-  { label: 'Tentang Kami', href: '/#tentang', isRoute: false },
-  { label: 'Edukasi', href: '/#edukasi', isRoute: false },
-  { label: 'Insight', href: '/#insight', isRoute: false },
-  { label: 'Kontak', href: '/#kontak', isRoute: false },
+  { label: 'Tentang Kami', href: '/#tentang', sectionId: 'tentang', isRoute: false },
+  { label: 'Layanan', href: '/#layanan', sectionId: 'layanan', isRoute: false },
+  { label: 'Portofolio', href: '/#portofolio', sectionId: 'portofolio', isRoute: false },
+  { label: 'Kontak', href: '/#kontak', sectionId: 'kontak', isRoute: false },
 ]
 
 // Geometric red mark SVG logo
@@ -32,9 +32,7 @@ function NexaBursaLogo() {
         aria-hidden="true"
         className="shrink-0"
       >
-        {/* Background square */}
         <rect width="32" height="32" rx="8" fill="#E11D2E" />
-        {/* Candlestick-inspired mark */}
         <rect x="8" y="14" width="3" height="10" rx="1" fill="white" />
         <rect x="8.5" y="10" width="2" height="5" rx="0.5" fill="white" />
         <rect x="8.5" y="23" width="2" height="3" rx="0.5" fill="white" />
@@ -62,8 +60,9 @@ export default function Navbar() {
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false)
   const { theme, toggleTheme } = useTheme()
   const isDark = theme === 'dark'
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  // Get navbar height based on viewport
   const getNavHeight = () => {
     if (typeof window === 'undefined') return '72px'
     if (window.innerWidth >= 3840) return '100px'
@@ -75,6 +74,7 @@ export default function Navbar() {
   useEffect(() => {
     setNavHeight(getNavHeight())
   }, [])
+
   // Detect scroll for navbar style change
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -97,6 +97,25 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
+
+  const handleNavClick = (e, link) => {
+    window.__nexaAnalytics?.track('nav_item_click', { label: link.label })
+    setMobileOpen(false)
+
+    if (link.sectionId) {
+      e.preventDefault()
+      if (location.pathname === '/') {
+        const el = document.getElementById(link.sectionId)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
+      } else {
+        navigate(`/#${link.sectionId}`)
+      }
+    } else if (link.href === '/' && location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
 
   return (
     <>
@@ -124,26 +143,33 @@ export default function Navbar() {
           {/* Desktop nav */}
           <nav aria-label="Navigasi utama" className="hidden lg:flex items-center gap-1">
             {NAV_LINKS.map((link) => {
-              const linkClass = "relative px-4 py-2 text-sm font-medium text-[var(--gray-light)] hover:text-[var(--white)] transition-colors duration-200 rounded-[var(--radius-md)] group"
+              const linkClass = "relative px-4 py-2 text-sm font-medium text-[var(--gray-light)] hover:text-[var(--white)] transition-colors duration-200 rounded-[var(--radius-md)] group cursor-pointer"
               const underline = (
                 <span
                   className="absolute bottom-0 left-4 right-4 h-[2px] bg-[var(--red-primary)] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left rounded-full"
                 />
               )
-              const handleClick = () => {
-                window.__nexaAnalytics?.track('nav_item_click', { label: link.label })
-              }
 
               if (link.isRoute) {
                 return (
-                  <Link key={link.href} to={link.href} onClick={handleClick} className={linkClass}>
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={(e) => handleNavClick(e, link)}
+                    className={linkClass}
+                  >
                     {link.label}
                     {underline}
                   </Link>
                 )
               }
               return (
-                <a key={link.href} href={link.href} onClick={handleClick} className={linkClass}>
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link)}
+                  className={linkClass}
+                >
                   {link.label}
                   {underline}
                 </a>
@@ -234,13 +260,23 @@ export default function Navbar() {
                   const mobileClass = "px-4 py-3 text-base font-medium text-[var(--gray-light)] hover:text-[var(--white)] hover:bg-[rgba(255,255,255,0.05)] rounded-[var(--radius-md)] transition-colors duration-150"
                   if (link.isRoute) {
                     return (
-                      <Link key={link.href} to={link.href} className={mobileClass} onClick={() => setMobileOpen(false)}>
+                      <Link
+                        key={link.href}
+                        to={link.href}
+                        className={mobileClass}
+                        onClick={(e) => handleNavClick(e, link)}
+                      >
                         {link.label}
                       </Link>
                     )
                   }
                   return (
-                    <a key={link.href} href={link.href} className={mobileClass} onClick={() => setMobileOpen(false)}>
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      className={mobileClass}
+                      onClick={(e) => handleNavClick(e, link)}
+                    >
                       {link.label}
                     </a>
                   )
@@ -331,7 +367,7 @@ export default function Navbar() {
                 </h3>
                 
                 <p className="text-[15px] leading-relaxed mb-8" style={{ color: 'var(--gray-light)' }}>
-                  Punya pertanyaan tentang layanan kami? Tim kami siap memberikan solusi terbaik melalui WhatsApp.
+                  Ingin mendiskusikan portofolio atau kemitraan strategis? Tim kami siap memberikan solusi terbaik melalui WhatsApp.
                 </p>
                 
                 <div className="w-full flex flex-col gap-3">

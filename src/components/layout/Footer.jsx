@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FacebookLogo, TwitterLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
 import Container from './Container'
 import { siteContent, parseText } from '../../config/siteContent'
@@ -41,8 +41,26 @@ function NexaBursaLogo() {
 }
 
 export default function Footer() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleFooterLink = (e, href) => {
+    if (href.startsWith('/#')) {
+      e.preventDefault()
+      const sectionId = href.replace('/#', '')
+      if (location.pathname === '/') {
+        const el = document.getElementById(sectionId)
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        navigate(href)
+      }
+    } else if (href === '/' && location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   return (
-    <footer className="bg-[var(--bg-secondary)] border-t border-[var(--border-subtle)] pt-16 pb-8">
+    <footer className="bg-[var(--bg-secondary)] border-t border-[var(--border-subtle)] pt-16 pb-16">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Logo & Deskripsi */}
@@ -80,6 +98,7 @@ export default function Footer() {
                     {item.href.startsWith('/') ? (
                       <Link
                         to={item.href}
+                        onClick={(e) => handleFooterLink(e, item.href)}
                         className="text-[var(--gray-light)] hover:text-[var(--red-primary)] text-sm transition-colors"
                       >
                         {item.label}
@@ -105,7 +124,7 @@ export default function Footer() {
             {parseText(siteContent.footer.copyright)}
           </p>
           <p className="text-[var(--gray-dark)] text-xs text-center md:text-right max-w-2xl">
-            {siteContent.global.companyName} terdaftar dan diawasi oleh Otoritas Jasa Keuangan (OJK).
+            {siteContent.global.companyName} beroperasi dengan standar kepatuhan dan tata kelola perusahaan yang transparan.
           </p>
         </div>
       </Container>

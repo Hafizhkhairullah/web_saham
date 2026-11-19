@@ -88,21 +88,30 @@ function ValueCard({ icon: Icon, color, title, desc, delay = 0 }) {
   )
 }
 
-function StatBlock({ value, label, delay = 0 }) {
+const PILLAR_ICONS = [ShieldCheck, ChartLineUp, Lightbulb, Handshake]
+
+function PillarBlock({ title, desc, index, delay = 0 }) {
   const reduced = useReducedMotion()
+  const Icon = PILLAR_ICONS[index % PILLAR_ICONS.length]
 
   return (
     <motion.div
       {...(reduced ? {} : fadeUp(delay))}
-      className="flex flex-col gap-2 items-center text-center p-6 rounded-[var(--radius-xl)]"
+      className="flex flex-col gap-3 p-6 rounded-[var(--radius-xl)]"
       style={{ background: 'var(--bg-card)', border: '1px solid var(--border-card)' }}
     >
-      <span className="text-3xl lg:text-4xl font-bold font-mono" style={{ color: 'var(--red-bright)' }}>
-        {value}
-      </span>
-      <span className="text-sm font-medium" style={{ color: 'var(--gray-light)' }}>
-        {label}
-      </span>
+      <div
+        className="w-10 h-10 rounded-xl flex items-center justify-center"
+        style={{ background: 'rgba(225,29,46,0.12)', color: 'var(--red-bright)' }}
+      >
+        <Icon size={20} weight="duotone" />
+      </div>
+      <h3 className="text-base font-bold" style={{ color: 'var(--white)' }}>
+        {title}
+      </h3>
+      <p className="text-xs sm:text-sm leading-relaxed" style={{ color: 'var(--gray-light)' }}>
+        {desc}
+      </p>
     </motion.div>
   )
 }
@@ -261,7 +270,7 @@ export default function TentangKamiPage() {
               highlight={siteContent.tentangKami.perusahaan.titleHighlight}
             />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <div className="flex flex-col gap-5">
                 {siteContent.tentangKami.perusahaan.paragraphs.map((p, i) => (
                   <motion.p
@@ -269,15 +278,26 @@ export default function TentangKamiPage() {
                     {...anim(i * 0.08)}
                     className="text-base lg:text-lg leading-relaxed"
                     style={{ color: 'var(--gray-light)' }}
-                    dangerouslySetInnerHTML={{ __html: parseText(p).replace(new RegExp(siteContent.global.companyName, 'g'), `<strong style="color: var(--white)">${siteContent.global.companyName}</strong>`) }}
+                    dangerouslySetInnerHTML={{
+                      __html: parseText(p).replace(
+                        new RegExp(siteContent.global.companyName, 'g'),
+                        `<strong style="color: var(--white)">${siteContent.global.companyName}</strong>`
+                      ),
+                    }}
                   />
                 ))}
               </div>
 
-              {/* Stats grid */}
-              <div className="grid grid-cols-2 gap-4 auto-rows-min">
-                {siteContent.tentangKami.perusahaan.stats.map((stat, i) => (
-                  <StatBlock key={i} value={stat.value} label={stat.label} delay={i * 0.06} />
+              {/* Corporate Pillars Grid (replaces removed stats) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-min">
+                {siteContent.tentangKami.perusahaan.pillars.map((pillar, i) => (
+                  <PillarBlock
+                    key={i}
+                    index={i}
+                    title={pillar.title}
+                    desc={pillar.desc}
+                    delay={i * 0.06}
+                  />
                 ))}
               </div>
             </div>
@@ -292,10 +312,10 @@ export default function TentangKamiPage() {
 
           <Container className="relative z-10">
             <SectionHeader
-              badge="Tujuan"
+              badge={siteContent.tentangKami.visiMisi.badge}
               badgeIcon={Target}
-              title="Visi &"
-              highlight="Misi"
+              title={siteContent.tentangKami.visiMisi.title}
+              highlight={siteContent.tentangKami.visiMisi.titleHighlight}
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -385,7 +405,7 @@ export default function TentangKamiPage() {
               badgeIcon={ChartLineUp}
               title={siteContent.tentangKami.timeline.title}
               highlight={siteContent.tentangKami.timeline.titleHighlight}
-              subtitle={siteContent.tentangKami.timeline.subtitle}
+              subtitle={parseText(siteContent.tentangKami.timeline.subtitle)}
             />
 
             <div className="max-w-2xl">
@@ -464,8 +484,8 @@ export default function TentangKamiPage() {
               {parseText(siteContent.tentangKami.cta.subtitle)}
             </motion.p>
             <motion.div {...anim(0.2)} className="flex flex-wrap gap-4 justify-center mt-4">
-              <a
-                href="#"
+              <Link
+                to="/#portofolio"
                 className="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white rounded-[var(--radius-pill)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{ background: 'var(--red-primary)' }}
                 onMouseEnter={(e) => {
@@ -479,9 +499,9 @@ export default function TentangKamiPage() {
               >
                 {siteContent.tentangKami.cta.primary}
                 <ArrowRight size={18} weight="bold" />
-              </a>
+              </Link>
               <Link
-                to="/"
+                to="/kontak"
                 className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-[var(--radius-pill)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{
                   color: 'var(--white)',
@@ -497,7 +517,6 @@ export default function TentangKamiPage() {
                   e.currentTarget.style.borderColor = 'var(--border-card)'
                 }}
               >
-                <ArrowLeft size={16} weight="bold" />
                 {siteContent.tentangKami.cta.secondary}
               </Link>
             </motion.div>
