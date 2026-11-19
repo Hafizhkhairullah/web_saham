@@ -7,10 +7,10 @@
 export const siteContent = {
   // ── Global ──
   global: {
-    companyName: "Bibit Investama",
+    companyName: "Bibit Berkah Investama",
     companyTagline: "Mitra Strategis Investasi & Manajemen Portofolio Korporasi",
     logoTextPart1: "Bibit",
-    logoTextPart2: "Investama",
+    logoTextPart2: "Berkah Investama",
   },
 
   // ── SEO & Meta ──
@@ -23,10 +23,10 @@ export const siteContent = {
   home: {
     hero: {
       badge: "Profil & Portofolio Korporasi",
-      titlePart1: "Mitra Strategis.",
-      titlePart2: "Solusi Terukur.",
-      titleHighlight: "Bernilai Jangka Panjang.",
-      subtitle: "BibitInvestama menghadirkan solusi manajemen portofolio, konsultasi investasi strategis, dan transformasi finansial modern yang dirancang untuk mendorong pertumbuhan bisnis serta korporasi di Indonesia.",
+      titlePart1: "lorem.",
+      titlePart2: "ipsum.",
+      titleHighlight: "dolor sit amet.",
+      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       ctaPrimary: "Jelajahi Portofolio",
       ctaSecondary: "Hubungi Kami",
       trustIndicators: [
@@ -51,20 +51,20 @@ export const siteContent = {
     about: {
       badge: "Tentang Perusahaan",
       title: "Mengenal Lebih Dekat",
-      titleHighlight: "BibitInvestama.",
-      description: "Kami adalah perusahaan solusi investasi dan manajemen korporasi yang berkomitmen membangun ekosistem finansial yang sehat, transparan, dan berdaya saing tinggi.\n\nMelalui pendekatan berbasis riset mendalam, teknologi modern, serta tata kelola perusahaan yang kuat, BibitInvestama menjadi mitra terpercaya bagi berbagai institusi dan korporasi dalam mengoptimalkan nilai portofolio mereka.",
+      titleHighlight: "BibitBerkahInvestama.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       highlights: [
         {
           title: "Tata Kelola & Kepatuhan",
-          desc: "Menjalankan setiap inisiatif bisnis sesuai standar regulasi dan prinsip Good Corporate Governance (GCG)."
+          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
           title: "Strategi Berbasis Riset",
-          desc: "Setiap keputusan dan pengelolaan portofolio didukung oleh analisis fundamental serta pemetaan risiko menyeluruh."
+          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
           title: "Kemitraan Berkelanjutan",
-          desc: "Fokus pada penciptaan nilai jangka panjang bersama mitra bisnis, institusi, dan pemangku kepentingan."
+          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         }
       ],
       cta: "Selengkapnya Tentang Kami"
@@ -73,30 +73,30 @@ export const siteContent = {
       badge: "Layanan & Fokus Bisnis",
       title: "Solusi Strategis",
       titleHighlight: "Perusahaan",
-      subtitle: "Kami memadukan keahlian finansial, tata kelola profesional, dan inovasi teknologi untuk menghadirkan layanan terbaik bagi mitra korporasi.",
+      subtitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       items: [
         {
           id: "portfolio-management",
           title: "Manajemen Portofolio & Aset",
-          desc: "Pengelolaan alokasi aset strategis yang dirancang untuk menjaga stabilitas sekaligus memaksimalkan potensi pertumbuhan nilai investasi jangka panjang.",
+          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           highlights: ["Diversifikasi Sektor Strategis", "Optimalisasi Nilai Aset", "Evaluasi Kinerja Berkala"]
         },
         {
           id: "corporate-advisory",
           title: "Konsultasi & Advisory Korporasi",
-          desc: "Pendampingan strategis dalam perencanaan struktur finansial, ekspansi usaha, hingga kemitraan investasi antar institusi.",
+          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           highlights: ["Perencanaan Struktur Modal", "Uji Tuntas & Kelayakan", "Sinergi Kemitraan Bisnis"]
         },
         {
           id: "digital-transformation",
           title: "Inovasi & Infrastruktur Finansial",
-          desc: "Modernisasi ekosistem pengelolaan investasi berbasis teknologi untuk meningkatkan efisiensi, akurasi pelaporan, dan transparansi data.",
+          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           highlights: ["Dashboard Analitik Korporasi", "Pelaporan Real-Time", "Arsitektur Keamanan Data"]
         },
         {
           id: "risk-governance",
           title: "Manajemen Risiko & Tata Kelola",
-          desc: "Kerangka kerja mitigasi risiko komprehensif guna memastikan setiap inisiatif bisnis berjalan aman di tengah dinamika ekonomi.",
+          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           highlights: ["Mitigasi Risiko Pasar", "Audit & Kepatuhan Regulasi", "Keberlanjutan ESG"]
         }
       ]
@@ -105,7 +105,7 @@ export const siteContent = {
       badge: "Portofolio Perusahaan",
       title: "Rekam Jejak &",
       titleHighlight: "Portofolio Kami",
-      subtitle: "Berbagai inisiatif strategis, proyek kolaborasi, dan pengelolaan portofolio korporasi yang telah kami jalankan bersama mitra di berbagai sektor industri.",
+      subtitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       categories: [
         "Semua",
         "Manajemen Aset",
@@ -228,7 +228,7 @@ export const siteContent = {
       badge: "Kontak & Kemitraan",
       title: "Mari Bangun",
       titleHighlight: "Kolaborasi Strategis",
-      subtitle: "Tim kami siap mendiskusikan kebutuhan korporasi dan strategi portofolio perusahaan Anda. Hubungi kami untuk menjadwalkan sesi konsultasi.",
+      subtitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       ctaPrimary: "Diskusi via WhatsApp",
       ctaSecondary: "Ke Halaman Kontak"
     }
@@ -239,17 +239,17 @@ export const siteContent = {
     hero: {
       badge: "Tentang Kami",
       title: "Mengenal Lebih Dekat",
-      titleHighlight: "BibitInvestama",
-      subtitle: "Mitra strategis dalam pengelolaan portofolio, solusi korporasi, dan pertumbuhan investasi berkelanjutan di Indonesia."
+      titleHighlight: "BibitBerkahInvestama",
+      subtitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     perusahaan: {
       badge: "Profil Perusahaan",
       title: "Identitas &",
       titleHighlight: "Dedikasi Kami",
       paragraphs: [
-        "{COMPANY_NAME} adalah perusahaan manajemen investasi dan konsultasi finansial yang berfokus pada penciptaan nilai jangka panjang bagi mitra korporasi maupun institusi di Indonesia.",
-        "Kami memadukan keahlian analisis pasar, teknologi finansial modern, serta tata kelola perusahaan yang transparan untuk menghadirkan solusi portofolio yang terukur dan adaptif terhadap perkembangan ekonomi.",
-        "Berlandaskan kepatuhan terhadap regulasi Otoritas Jasa Keuangan (OJK), {COMPANY_NAME} senantiasa menjunjung tinggi integritas, akuntabilitas, dan standar profesionalisme dalam setiap kemitraan strategis yang kami jalankan."
+        "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
       ],
       pillars: [
         {
@@ -274,19 +274,18 @@ export const siteContent = {
       badge: "Arah Strategis",
       title: "Visi &",
       titleHighlight: "Misi",
-      visi: "Menjadi perusahaan manajemen investasi dan mitra strategis korporasi terkemuka di Indonesia yang mendorong pertumbuhan ekonomi berkelanjutan melalui tata kelola yang transparan, inovatif, dan terpercaya.",
+      visi: "lorem ipsum dolor sit amet",
       misi: [
-        "Menghadirkan solusi pengelolaan portofolio dan konsultasi strategis yang memberikan nilai tambah nyata bagi mitra.",
-        "Menerapkan standar manajemen risiko dan tata kelola perusahaan tertinggi dalam setiap aspek operasional.",
-        "Mengembangkan inovasi teknologi finansial yang meningkatkan efisiensi dan transparansi pengelolaan aset.",
-        "Membangun ekosistem kemitraan jangka panjang yang berkontribusi positif terhadap pembangunan ekonomi nasional."
+        "lorem ipsum dolor sit amet",
+        "consectetur adipiscing elit",
+        "sed do eiusmod tempor incididunt",
       ]
     },
     nilai: {
       badge: "Prinsip Korporasi",
       title: "Nilai-Nilai",
       titleHighlight: "Kami",
-      subtitle: "Prinsip utama yang menjadi fondasi budaya kerja, pengambilan keputusan, dan komitmen kami kepada setiap mitra.",
+      subtitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       items: [
         { title: "Integritas", desc: "Menjaga kepercayaan mitra melalui kejujuran, etika profesional, dan kepatuhan ketat terhadap standar regulasi." },
         { title: "Inovasi", desc: "Terus mengembangkan metode analisis dan pemanfaatan teknologi untuk menghadirkan solusi finansial yang relevan." },
@@ -298,7 +297,7 @@ export const siteContent = {
       badge: "Rekam Jejak",
       title: "Perjalanan",
       titleHighlight: "Perusahaan",
-      subtitle: "Tonggak sejarah pertumbuhan dan transformasi {COMPANY_NAME} dalam membangun portofolio korporasi yang tangguh.",
+      subtitle: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       items: [
         { year: "2019", title: "Pendirian {COMPANY_NAME}", desc: "Didirikan dengan fokus awal pada riset pasar modal dan konsultasi strategis bagi pelaku usaha nasional." },
         { year: "2020", title: "Pengembangan Sistem Analitik Portofolio", desc: "Meluncurkan kerangka kerja manajemen portofolio berbasis data untuk meningkatkan akurasi pemetaan risiko." },
