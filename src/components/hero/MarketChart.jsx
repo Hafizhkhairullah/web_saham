@@ -38,8 +38,8 @@ export default function MarketChart({ data }) {
         >
           <defs>
             <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#E11D2E" stopOpacity={0.3} />
-              <stop offset="100%" stopColor="#E11D2E" stopOpacity={0} />
+              <stop offset="0%" stopColor="#4ADE80" stopOpacity={0.3} />
+              <stop offset="100%" stopColor="#4ADE80" stopOpacity={0} />
             </linearGradient>
           </defs>
           <XAxis
@@ -59,11 +59,11 @@ export default function MarketChart({ data }) {
           <Area
             type="monotone"
             dataKey="price"
-            stroke="#E11D2E"
+            stroke="#4ADE80"
             strokeWidth={2}
             fill="url(#chartGradient)"
             dot={false}
-            activeDot={{ r: 4, fill: '#FF3B4D', stroke: '#050505', strokeWidth: 2 }}
+            activeDot={{ r: 4, fill: '#86EFAC', stroke: '#050505', strokeWidth: 2 }}
           />
         </AreaChart>
       </ResponsiveContainer>

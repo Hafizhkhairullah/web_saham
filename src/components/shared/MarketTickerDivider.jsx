@@ -64,7 +64,7 @@ export default function MarketTickerDivider() {
         style={{
           background: 'linear-gradient(90deg, transparent 10%, var(--red-bright), transparent 90%)',
           opacity: 0,
-          boxShadow: '0 0 12px var(--red-bright), 0 0 24px rgba(255, 59, 77, 0.3)',
+          boxShadow: '0 0 12px var(--red-bright), 0 0 24px rgba(134, 239, 172, 0.3)',
         }}
       />
 

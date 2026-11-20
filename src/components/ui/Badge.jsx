@@ -17,8 +17,8 @@ export default function Badge({ children, variant = 'default', className = '' })
       'text-[var(--gray-light)]',
     ],
     red: [
-      'bg-[rgba(225,29,46,0.12)]',
-      'border border-[rgba(225,29,46,0.25)]',
+      'bg-[rgba(74,222,128,0.12)]',
+      'border border-[rgba(74,222,128,0.25)]',
       'text-[var(--red-bright)]',
     ],
     green: [

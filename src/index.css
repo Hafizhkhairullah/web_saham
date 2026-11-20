@@ -25,9 +25,9 @@ html {
   --bg-main:        #050505;
   --bg-secondary:   #0D0D0D;
   --bg-card:        #111111;
-  --red-primary:    #E11D2E;
-  --red-bright:     #FF3B4D;
-  --red-dark:       #7F101D;
+  --red-primary:    #4ADE80;
+  --red-bright:     #86EFAC;
+  --red-dark:       #166534;
   --white:          #F7F7F7;
   --gray-light:     #B8B8B8;
   --gray-mid:       #555555;
@@ -71,9 +71,9 @@ html {
   --gray-mid:       #8E8E93;
   --gray-dark:      #D1D1D6;
   /* Accent reds stay (pass contrast on light bg) */
-  --red-primary:    #C8001E;
-  --red-bright:     #E11D2E;
-  --red-dark:       #7F101D;
+  --red-primary:    #22C55E;
+  --red-bright:     #4ADE80;
+  --red-dark:       #166534;
   /* Data colors — darker for light bg contrast */
   --green-data:     #16A34A;
   --red-data:       #DC2626;
@@ -228,10 +228,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .red-glow-shadow {
-  box-shadow: 0 0 24px rgba(225, 29, 46, 0.25), 0 0 48px rgba(225, 29, 46, 0.1);
+  box-shadow: 0 0 24px rgba(74, 222, 128, 0.25), 0 0 48px rgba(74, 222, 128, 0.1);
 }
 [data-theme="light"] .red-glow-shadow {
-  box-shadow: 0 0 16px rgba(200, 0, 30, 0.15), 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 0 16px rgba(74, 222, 128, 0.15), 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .text-gradient-red {

@@ -102,7 +102,7 @@ function PillarBlock({ title, desc, index, delay = 0 }) {
     >
       <div
         className="w-10 h-10 rounded-xl flex items-center justify-center"
-        style={{ background: 'rgba(225,29,46,0.12)', color: 'var(--red-bright)' }}
+        style={{ background: 'rgba(74,222,128,0.12)', color: 'var(--red-bright)' }}
       >
         <Icon size={20} weight="duotone" />
       </div>
@@ -112,34 +112,6 @@ function PillarBlock({ title, desc, index, delay = 0 }) {
       <p className="text-xs sm:text-sm leading-relaxed" style={{ color: 'var(--gray-light)' }}>
         {desc}
       </p>
-    </motion.div>
-  )
-}
-
-function TimelineItem({ year, title, desc, delay = 0 }) {
-  const reduced = useReducedMotion()
-
-  return (
-    <motion.div
-      {...(reduced ? {} : fadeUp(delay))}
-      className="relative flex gap-6 items-start"
-    >
-      {/* Dot + line */}
-      <div className="flex flex-col items-center shrink-0">
-        <div
-          className="w-3 h-3 rounded-full"
-          style={{ background: 'var(--red-primary)' }}
-        />
-        <div className="w-px flex-1 min-h-[40px]" style={{ background: 'var(--border-subtle)' }} />
-      </div>
-
-      <div className="flex flex-col gap-1.5 pb-8">
-        <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--red-bright)' }}>
-          {year}
-        </span>
-        <h4 className="font-semibold" style={{ color: 'var(--white)' }}>{title}</h4>
-        <p className="text-sm leading-relaxed" style={{ color: 'var(--gray-light)' }}>{desc}</p>
-      </div>
     </motion.div>
   )
 }
@@ -205,7 +177,7 @@ export default function TentangKamiPage() {
               zIndex: 1,
               left: '-10%', top: '-20%',
               width: '60%', height: '100%',
-              background: 'radial-gradient(ellipse at 50% 50%, rgba(225,29,46,0.06) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse at 50% 50%, rgba(74,222,128,0.06) 0%, transparent 70%)',
             }}
             aria-hidden="true"
           />
@@ -324,8 +296,8 @@ export default function TentangKamiPage() {
                 {...anim(0)}
                 className="relative p-8 lg:p-10 rounded-[var(--radius-xl)] flex flex-col gap-5"
                 style={{
-                  background: isLight ? 'rgba(225,29,46,0.04)' : 'rgba(225,29,46,0.06)',
-                  border: '1px solid rgba(225,29,46,0.12)',
+                  background: isLight ? 'rgba(74,222,128,0.04)' : 'rgba(74,222,128,0.06)',
+                  border: '1px solid rgba(74,222,128,0.12)',
                 }}
               >
                 <div className="flex items-center gap-3">
@@ -394,35 +366,6 @@ export default function TentangKamiPage() {
         </section>
 
         {/* ═══════════════════════════════════════ */}
-        {/* SECTION 4: Perjalanan Kami */}
-        {/* ═══════════════════════════════════════ */}
-        <section className="relative py-20 lg:py-28 overflow-hidden" style={{ background: 'var(--bg-main)' }}>
-          <GSAPGeometricBackground count={8} zIndex={0} />
-
-          <Container className="relative z-10">
-            <SectionHeader
-              badge={siteContent.tentangKami.timeline.badge}
-              badgeIcon={ChartLineUp}
-              title={siteContent.tentangKami.timeline.title}
-              highlight={siteContent.tentangKami.timeline.titleHighlight}
-              subtitle={parseText(siteContent.tentangKami.timeline.subtitle)}
-            />
-
-            <div className="max-w-2xl">
-              {siteContent.tentangKami.timeline.items.map((item, i) => (
-                <TimelineItem
-                  key={i}
-                  year={item.year}
-                  title={parseText(item.title)}
-                  desc={parseText(item.desc)}
-                  delay={i * 0.08}
-                />
-              ))}
-            </div>
-          </Container>
-        </section>
-
-        {/* ═══════════════════════════════════════ */}
         {/* SECTION 5: Tim Kami */}
         {/* ═══════════════════════════════════════ */}
         <section className="relative py-20 lg:py-28 overflow-hidden" style={{ background: 'var(--bg-secondary)' }}>
@@ -462,7 +405,7 @@ export default function TentangKamiPage() {
               left: '50%', top: '50%',
               transform: 'translate(-50%, -50%)',
               width: '600px', height: '400px',
-              background: 'radial-gradient(ellipse, rgba(225,29,46,0.08) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse, rgba(74,222,128,0.08) 0%, transparent 70%)',
             }}
             aria-hidden="true"
           />
@@ -485,12 +428,12 @@ export default function TentangKamiPage() {
             </motion.p>
             <motion.div {...anim(0.2)} className="flex flex-wrap gap-4 justify-center mt-4">
               <Link
-                to="/#portofolio"
+                to="/#layanan"
                 className="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white rounded-[var(--radius-pill)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{ background: 'var(--red-primary)' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'var(--red-bright)'
-                  e.currentTarget.style.boxShadow = '0 0 24px rgba(225,29,46,0.4)'
+                  e.currentTarget.style.boxShadow = '0 0 24px rgba(74,222,128,0.4)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'var(--red-primary)'

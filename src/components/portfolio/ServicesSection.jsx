@@ -13,7 +13,7 @@ import GSAPGeometricBackground from '../background/GSAPGeometricBackground'
 import { siteContent, parseText } from '../../config/siteContent'
 
 const SERVICE_ICONS = [ChartPieSlice, Briefcase, Cpu, ShieldCheck]
-const ACCENT_COLORS = ['#E11D2E', '#3B82F6', '#10B981', '#F59E0B']
+const ACCENT_COLORS = ['#4ADE80', '#3B82F6', '#10B981', '#F59E0B']
 
 export default function ServicesSection() {
   const reduced = useReducedMotion()

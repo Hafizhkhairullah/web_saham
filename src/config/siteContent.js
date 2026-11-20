@@ -27,7 +27,7 @@ export const siteContent = {
       titlePart2: "ipsum.",
       titleHighlight: "dolor sit amet.",
       subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      ctaPrimary: "Jelajahi Portofolio",
+      ctaPrimary: "Jelajahi Layanan",
       ctaSecondary: "Hubungi Kami",
       trustIndicators: [
         "Terdaftar & Diawasi Resmi",
@@ -327,7 +327,7 @@ export const siteContent = {
       title: "Siap Berkolaborasi Bersama",
       titleHighlight: "Kami?",
       subtitle: "Pelajari lebih lanjut bagaimana {COMPANY_NAME} dapat mendukung pencapaian tujuan strategis dan optimalisasi portofolio perusahaan Anda.",
-      primary: "Lihat Portofolio Kami",
+      primary: "Lihat Layanan Kami",
       secondary: "Hubungi Tim Kami"
     }
   },
@@ -372,17 +372,16 @@ export const siteContent = {
           { label: "Beranda", href: "/" },
           { label: "Tentang Kami", href: "/tentang" },
           { label: "Layanan Strategis", href: "/#layanan" },
-          { label: "Portofolio", href: "/#portofolio" },
           { label: "Hubungi Kami", href: "/kontak" }
         ]
       },
       {
-        title: "Fokus Portofolio",
+        title: "Fokus Layanan",
         items: [
-          { label: "Manajemen Aset", href: "/#portofolio" },
-          { label: "Advisory Korporasi", href: "/#portofolio" },
-          { label: "Transformasi Digital", href: "/#portofolio" },
-          { label: "Inisiatif ESG", href: "/#portofolio" }
+          { label: "Manajemen Aset", href: "/#layanan" },
+          { label: "Advisory Korporasi", href: "/#layanan" },
+          { label: "Transformasi Digital", href: "/#layanan" },
+          { label: "Inisiatif ESG", href: "/#layanan" }
         ]
       },
       {

@@ -48,8 +48,8 @@ export default function MarketDashboard() {
       role="region"
       aria-label={`Dashboard pasar saham - ${siteContent.home.demoDashboard.demoTag}`}
       style={{
-        border: '1px solid rgba(225,29,46,0.15)',
-        boxShadow: '0 0 40px rgba(225,29,46,0.08), 0 24px 48px rgba(0,0,0,0.4)',
+        border: '1px solid rgba(74,222,128,0.15)',
+        boxShadow: '0 0 40px rgba(74,222,128,0.08), 0 24px 48px rgba(0,0,0,0.4)',
       }}
       onClick={() =>
         window.__nexaAnalytics?.track('hero_dashboard_interaction')
@@ -78,9 +78,9 @@ export default function MarketDashboard() {
         <span
           className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
           style={{
-            background: 'rgba(225,29,46,0.15)',
+            background: 'rgba(74,222,128,0.15)',
             color: 'var(--red-bright)',
-            border: '1px solid rgba(225,29,46,0.2)',
+            border: '1px solid rgba(74,222,128,0.2)',
           }}
         >
           {siteContent.home.demoDashboard.demoTag}
@@ -164,8 +164,8 @@ export default function MarketDashboard() {
         <button
           className="w-full py-2.5 text-sm font-semibold rounded-[var(--radius-md)] transition-all duration-200 mt-1 min-h-[44px]"
           style={{
-            background: 'rgba(225,29,46,0.1)',
-            border: '1px solid rgba(225,29,46,0.2)',
+            background: 'rgba(74,222,128,0.1)',
+            border: '1px solid rgba(74,222,128,0.2)',
             color: 'var(--red-bright)',
           }}
           onClick={(e) => {
@@ -173,10 +173,10 @@ export default function MarketDashboard() {
             window.__nexaAnalytics?.track('hero_primary_cta_click', { source: 'dashboard' })
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(225,29,46,0.2)'
+            e.currentTarget.style.background = 'rgba(74,222,128,0.2)'
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(225,29,46,0.1)'
+            e.currentTarget.style.background = 'rgba(74,222,128,0.1)'
           }}
         >
           Mulai Trading (Demo)

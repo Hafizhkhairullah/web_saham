@@ -37,7 +37,7 @@ const Button = forwardRef(function Button(
       'rounded-[var(--radius-pill)]',
       'hover:bg-[var(--red-bright)]',
       'hover:-translate-y-0.5',
-      'hover:shadow-[0_0_24px_rgba(225,29,46,0.4)]',
+      'hover:shadow-[0_0_24px_rgba(74,222,128,0.4)]',
       'active:translate-y-0 active:scale-[0.98]',
       'focus-visible:outline-[var(--red-bright)]',
     ],

@@ -73,7 +73,7 @@ export default function PortfolioSection() {
           transform: 'translate(-50%, -50%)',
           width: '80%',
           height: '60%',
-          background: 'radial-gradient(ellipse at 50% 50%, rgba(225,29,46,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at 50% 50%, rgba(74,222,128,0.06) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -149,7 +149,7 @@ export default function PortfolioSection() {
                   border: isActive
                     ? '1px solid var(--red-bright)'
                     : '1px solid var(--border-subtle)',
-                  boxShadow: isActive ? '0 4px 16px rgba(225,29,46,0.28)' : 'none',
+                  boxShadow: isActive ? '0 4px 16px rgba(74,222,128,0.28)' : 'none',
                 }}
               >
                 {cat}
@@ -204,7 +204,7 @@ export default function PortfolioSection() {
                     <span
                       className="px-3 py-1 rounded-full text-xs font-semibold text-white backdrop-blur-md"
                       style={{
-                        background: 'rgba(225,29,46,0.88)',
+                        background: 'rgba(74,222,128,0.88)',
                         border: '1px solid rgba(255,255,255,0.2)',
                       }}
                     >
@@ -251,9 +251,9 @@ export default function PortfolioSection() {
                     <div
                       className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold"
                       style={{
-                        background: isLight ? 'rgba(225,29,46,0.06)' : 'rgba(225,29,46,0.1)',
+                        background: isLight ? 'rgba(74,222,128,0.06)' : 'rgba(74,222,128,0.1)',
                         color: 'var(--red-bright)',
-                        border: '1px solid rgba(225,29,46,0.18)',
+                        border: '1px solid rgba(74,222,128,0.18)',
                       }}
                     >
                       <Medal size={15} weight="fill" className="shrink-0" />

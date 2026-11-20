@@ -69,7 +69,7 @@ export default function FooterNewsletter() {
             </div>
             <div className="hidden justify-end md:flex">
               <div className="relative">
-                <div className="absolute inset-0 rotate-6 rounded-xl" style={{ backgroundColor: 'rgba(225,29,46,0.2)' }} />
+                <div className="absolute inset-0 rotate-6 rounded-xl" style={{ backgroundColor: 'rgba(74,222,128,0.2)' }} />
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400"
                   alt="Acme Inc. team"

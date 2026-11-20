@@ -93,7 +93,7 @@ export default function HeroBackground() {
           zIndex: 2,
           right: '-5%', top: '0%',
           width: '70%', height: '100%',
-          background: `radial-gradient(ellipse at 60% 40%, rgba(225,29,46,${glowA}) 0%, rgba(127,16,29,${glowB}) 45%, transparent 70%)`,
+          background: `radial-gradient(ellipse at 60% 40%, rgba(74,222,128,${glowA}) 0%, rgba(22,101,52,${glowB}) 45%, transparent 70%)`,
           animation: 'glow-pulse 6s ease-in-out infinite',
         }}
       />
@@ -109,8 +109,8 @@ export default function HeroBackground() {
       >
         <defs>
           <linearGradient id="nexabg-linefill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#E11D2E" stopOpacity="0.18" />
-            <stop offset="100%" stopColor="#E11D2E" stopOpacity="0" />
+            <stop offset="0%" stopColor="#4ADE80" stopOpacity="0.18" />
+            <stop offset="100%" stopColor="#4ADE80" stopOpacity="0" />
           </linearGradient>
         </defs>
         <polygon
@@ -119,7 +119,7 @@ export default function HeroBackground() {
         />
         <polyline
           points="0,420 80,380 160,390 220,340 290,355 360,300 430,320 500,270 580,280 650,230 720,245 800,180"
-          fill="none" stroke="#E11D2E" strokeWidth="1.5"
+          fill="none" stroke="#4ADE80" strokeWidth="1.5"
         />
       </svg>
 

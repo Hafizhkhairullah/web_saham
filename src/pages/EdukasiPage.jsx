@@ -141,7 +141,7 @@ export default function EdukasiPage() {
               zIndex: 1,
               right: '-10%', top: '-20%',
               width: '60%', height: '100%',
-              background: 'radial-gradient(ellipse at 50% 50%, rgba(225,29,46,0.06) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse at 50% 50%, rgba(74,222,128,0.06) 0%, transparent 70%)',
             }}
             aria-hidden="true"
           />
@@ -262,8 +262,8 @@ export default function EdukasiPage() {
                 {...(reduced ? {} : fadeUp(0.1))}
                 className="p-8 rounded-[var(--radius-xl)] flex flex-col gap-5 sticky top-28"
                 style={{
-                  background: isLight ? 'rgba(225,29,46,0.04)' : 'rgba(225,29,46,0.06)',
-                  border: '1px solid rgba(225,29,46,0.12)',
+                  background: isLight ? 'rgba(74,222,128,0.04)' : 'rgba(74,222,128,0.06)',
+                  border: '1px solid rgba(74,222,128,0.12)',
                 }}
               >
                 <div className="flex items-center gap-3">
@@ -390,7 +390,7 @@ export default function EdukasiPage() {
               left: '50%', top: '50%',
               transform: 'translate(-50%, -50%)',
               width: '600px', height: '400px',
-              background: 'radial-gradient(ellipse, rgba(225,29,46,0.08) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse, rgba(74,222,128,0.08) 0%, transparent 70%)',
             }}
             aria-hidden="true"
           />
@@ -418,7 +418,7 @@ export default function EdukasiPage() {
                 style={{ background: 'var(--red-primary)' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'var(--red-bright)'
-                  e.currentTarget.style.boxShadow = '0 0 24px rgba(225,29,46,0.4)'
+                  e.currentTarget.style.boxShadow = '0 0 24px rgba(74,222,128,0.4)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'var(--red-primary)'

@@ -98,15 +98,15 @@ export default function EdukasiSection() {
             className="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white rounded-[var(--radius-pill)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             style={{
               background: 'var(--red-primary)',
-              boxShadow: '0 0 0 rgba(225,29,46,0)',
+              boxShadow: '0 0 0 rgba(74,222,128,0)',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'var(--red-bright)'
-              e.currentTarget.style.boxShadow = '0 0 24px rgba(225,29,46,0.4)'
+              e.currentTarget.style.boxShadow = '0 0 24px rgba(74,222,128,0.4)'
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = 'var(--red-primary)'
-              e.currentTarget.style.boxShadow = '0 0 0 rgba(225,29,46,0)'
+              e.currentTarget.style.boxShadow = '0 0 0 rgba(74,222,128,0)'
             }}
           >
             {siteContent.home.edukasi.cta}

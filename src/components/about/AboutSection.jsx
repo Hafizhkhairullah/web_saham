@@ -118,7 +118,7 @@ export default function AboutSection() {
                   >
                     <div
                       className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
-                      style={{ background: 'rgba(225,29,46,0.12)', color: 'var(--red-bright)' }}
+                      style={{ background: 'rgba(74,222,128,0.12)', color: 'var(--red-bright)' }}
                     >
                       <Icon size={20} weight="duotone" />
                     </div>
@@ -147,15 +147,15 @@ export default function AboutSection() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 font-semibold text-white rounded-[var(--radius-pill)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 style={{
                   background: 'var(--red-primary)',
-                  boxShadow: '0 0 0 rgba(225,29,46,0)',
+                  boxShadow: '0 0 0 rgba(74,222,128,0)',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'var(--red-bright)'
-                  e.currentTarget.style.boxShadow = '0 0 24px rgba(225,29,46,0.4)'
+                  e.currentTarget.style.boxShadow = '0 0 24px rgba(74,222,128,0.4)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'var(--red-primary)'
-                  e.currentTarget.style.boxShadow = '0 0 0 rgba(225,29,46,0)'
+                  e.currentTarget.style.boxShadow = '0 0 0 rgba(74,222,128,0)'
                 }}
               >
                 {siteContent.home.about.cta}

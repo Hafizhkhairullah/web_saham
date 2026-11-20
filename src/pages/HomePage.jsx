@@ -5,7 +5,6 @@ import HeroSection from '../components/hero/HeroSection'
 import MarketTickerDivider from '../components/shared/MarketTickerDivider'
 import AboutSection from '../components/about/AboutSection'
 import ServicesSection from '../components/portfolio/ServicesSection'
-import PortfolioSection from '../components/portfolio/PortfolioSection'
 import KontakSection from '../components/kontak/KontakSection'
 import Footer from '../components/layout/Footer'
 import { useGSAPScrollAnimations } from '../hooks/useGSAPScrollAnimations'
@@ -16,7 +15,7 @@ export default function HomePage() {
   // Initialize all GSAP ScrollTrigger animations
   useGSAPScrollAnimations()
 
-  // Smooth scroll to section if URL has a hash (e.g. /#portofolio)
+  // Smooth scroll to section if URL has a hash (e.g. /#layanan)
   useEffect(() => {
     if (location.hash) {
       const targetId = location.hash.replace('#', '')
@@ -37,7 +36,6 @@ export default function HomePage() {
       <MarketTickerDivider />
       <AboutSection />
       <ServicesSection />
-      <PortfolioSection />
       <KontakSection />
       <Footer />
     </main>

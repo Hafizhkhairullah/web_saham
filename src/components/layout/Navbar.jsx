@@ -11,11 +11,9 @@ const NAV_LINKS = [
   { label: 'Beranda', href: '/', isRoute: true },
   { label: 'Tentang Kami', href: '/#tentang', sectionId: 'tentang', isRoute: false },
   { label: 'Layanan', href: '/#layanan', sectionId: 'layanan', isRoute: false },
-  { label: 'Portofolio', href: '/#portofolio', sectionId: 'portofolio', isRoute: false },
   { label: 'Kontak', href: '/#kontak', sectionId: 'kontak', isRoute: false },
 ]
 
-// Geometric red mark SVG logo
 function NexaBursaLogo() {
   return (
     <Link
@@ -23,26 +21,12 @@ function NexaBursaLogo() {
       aria-label={`${siteContent.global.companyName} - kembali ke beranda`}
       className="flex items-center gap-2.5 shrink-0"
     >
-      {/* Geometric mark */}
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
+      <img
+        src="/assets/logo.png"
+        alt=""
         aria-hidden="true"
-        className="shrink-0"
-      >
-        <rect width="32" height="32" rx="8" fill="#E11D2E" />
-        <rect x="8" y="14" width="3" height="10" rx="1" fill="white" />
-        <rect x="8.5" y="10" width="2" height="5" rx="0.5" fill="white" />
-        <rect x="8.5" y="23" width="2" height="3" rx="0.5" fill="white" />
-        <rect x="14" y="9" width="3" height="14" rx="1" fill="white" />
-        <rect x="14.5" y="6" width="2" height="4" rx="0.5" fill="white" />
-        <rect x="14.5" y="22" width="2" height="3" rx="0.5" fill="white" />
-        <rect x="20" y="12" width="3" height="12" rx="1" fill="white" opacity="0.85" />
-        <rect x="20.5" y="8" width="2" height="5" rx="0.5" fill="white" opacity="0.85" />
-        <rect x="20.5" y="23" width="2" height="2" rx="0.5" fill="white" opacity="0.85" />
-      </svg>
+        className="h-9 w-9 shrink-0 object-contain"
+      />
       {/* Wordmark */}
       <span
         className="text-[17px] 3xl:text-[22px] 4xl:text-[28px] font-bold tracking-tight"

@@ -75,7 +75,7 @@ export default function KontakPage() {
               zIndex: 1,
               right: '-10%', top: '-20%',
               width: '60%', height: '100%',
-              background: 'radial-gradient(ellipse at 50% 50%, rgba(225,29,46,0.06) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse at 50% 50%, rgba(74,222,128,0.06) 0%, transparent 70%)',
             }}
             aria-hidden="true"
           />
@@ -172,7 +172,7 @@ export default function KontakPage() {
                   {/* Email */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-colors"
-                         style={{ background: 'rgba(225, 29, 46, 0.1)', color: 'var(--red-primary)' }}>
+                         style={{ background: 'rgba(74, 222, 128, 0.1)', color: 'var(--red-primary)' }}>
                       <EnvelopeSimple size={24} weight="fill" />
                     </div>
                     <div>
@@ -189,7 +189,7 @@ export default function KontakPage() {
                   {/* Address */}
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-colors"
-                         style={{ background: 'rgba(225, 29, 46, 0.1)', color: 'var(--red-primary)' }}>
+                         style={{ background: 'rgba(74, 222, 128, 0.1)', color: 'var(--red-primary)' }}>
                       <MapPin size={24} weight="fill" />
                     </div>
                     <div>
@@ -281,7 +281,7 @@ export default function KontakPage() {
                       style={{ background: 'var(--red-primary)' }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.background = 'var(--red-bright)'
-                        e.currentTarget.style.boxShadow = '0 0 15px rgba(225,29,46,0.3)'
+                        e.currentTarget.style.boxShadow = '0 0 15px rgba(74,222,128,0.3)'
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.background = 'var(--red-primary)'

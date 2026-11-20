@@ -9,9 +9,9 @@ const cardVariants = cva(
   {
     variants: {
       gradient: {
-        red: "bg-gradient-to-br from-red-50 to-rose-100/50 dark:from-[rgba(225,29,46,0.1)] dark:to-[rgba(225,29,46,0.02)]",
+        red: "bg-gradient-to-br from-green-50 to-emerald-100/50 dark:from-[rgba(74,222,128,0.1)] dark:to-[rgba(74,222,128,0.02)]",
         gray: "bg-gradient-to-br from-slate-50 to-slate-100/50 dark:from-[rgba(255,255,255,0.03)] dark:to-[rgba(255,255,255,0.01)]",
-        darkred: "bg-gradient-to-br from-rose-50 to-red-100/50 dark:from-[rgba(225,29,46,0.15)] dark:to-[rgba(225,29,46,0.05)]",
+        darkred: "bg-gradient-to-br from-emerald-50 to-green-100/50 dark:from-[rgba(74,222,128,0.15)] dark:to-[rgba(74,222,128,0.05)]",
       },
     },
     defaultVariants: {

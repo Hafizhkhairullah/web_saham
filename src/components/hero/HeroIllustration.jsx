@@ -16,7 +16,7 @@ export default function HeroIllustration() {
       <div
         className="absolute -inset-4 rounded-[32px] pointer-events-none blur-2xl opacity-45"
         style={{
-          background: 'radial-gradient(circle at 60% 40%, rgba(225,29,46,0.3), transparent 70%)',
+          background: 'radial-gradient(circle at 60% 40%, rgba(74,222,128,0.3), transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -25,10 +25,10 @@ export default function HeroIllustration() {
       <div
         className="relative w-full rounded-[var(--radius-xl)] overflow-hidden glass-card p-3"
         style={{
-          border: '1px solid rgba(225,29,46,0.22)',
+          border: '1px solid rgba(74,222,128,0.22)',
           boxShadow: isLight
-            ? '0 24px 60px rgba(0,0,0,0.1), 0 0 36px rgba(225,29,46,0.1)'
-            : '0 28px 70px rgba(0,0,0,0.6), 0 0 48px rgba(225,29,46,0.15)',
+            ? '0 24px 60px rgba(0,0,0,0.1), 0 0 36px rgba(74,222,128,0.1)'
+            : '0 28px 70px rgba(0,0,0,0.6), 0 0 48px rgba(74,222,128,0.15)',
         }}
       >
         {/* Image & Vector Illustration Canvas — Proportional 4:3 aspect ratio */}
@@ -46,7 +46,7 @@ export default function HeroIllustration() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                'linear-gradient(135deg, rgba(5,5,8,0.8) 0%, rgba(17,17,24,0.5) 50%, rgba(225,29,46,0.28) 100%)',
+                'linear-gradient(135deg, rgba(5,5,8,0.8) 0%, rgba(17,17,24,0.5) 50%, rgba(74,222,128,0.28) 100%)',
             }}
           />
 
@@ -61,12 +61,12 @@ export default function HeroIllustration() {
           >
             <defs>
               <linearGradient id="heroIllustArea" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#FF3B4D" stopOpacity="0.38" />
-                <stop offset="100%" stopColor="#E11D2E" stopOpacity="0.0" />
+                <stop offset="0%" stopColor="#86EFAC" stopOpacity="0.38" />
+                <stop offset="100%" stopColor="#4ADE80" stopOpacity="0.0" />
               </linearGradient>
               <linearGradient id="heroIllustLine" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="#FF3B4D" stopOpacity="0.4" />
-                <stop offset="50%" stopColor="#FF3B4D" stopOpacity="1" />
+                <stop offset="0%" stopColor="#86EFAC" stopOpacity="0.4" />
+                <stop offset="50%" stopColor="#86EFAC" stopOpacity="1" />
                 <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.95" />
               </linearGradient>
               <linearGradient id="glassPanel" x1="0" y1="0" x2="1" y2="1">
@@ -91,9 +91,9 @@ export default function HeroIllustration() {
               <rect x="95" y="255" width="38" height="75" rx="6" fill="url(#glassPanel)" stroke="rgba(255,255,255,0.22)" />
               <rect x="165" y="220" width="38" height="110" rx="6" fill="url(#glassPanel)" stroke="rgba(255,255,255,0.25)" />
               <rect x="235" y="195" width="38" height="135" rx="6" fill="url(#glassPanel)" stroke="rgba(255,255,255,0.28)" />
-              <rect x="305" y="155" width="38" height="175" rx="6" fill="rgba(225,29,46,0.28)" stroke="rgba(255,59,77,0.5)" />
-              <rect x="375" y="125" width="38" height="205" rx="6" fill="rgba(225,29,46,0.42)" stroke="rgba(255,59,77,0.65)" />
-              <rect x="445" y="95" width="38" height="235" rx="6" fill="rgba(225,29,46,0.65)" stroke="#FF3B4D" />
+              <rect x="305" y="155" width="38" height="175" rx="6" fill="rgba(74,222,128,0.28)" stroke="rgba(134,239,172,0.5)" />
+              <rect x="375" y="125" width="38" height="205" rx="6" fill="rgba(74,222,128,0.42)" stroke="rgba(134,239,172,0.65)" />
+              <rect x="445" y="95" width="38" height="235" rx="6" fill="rgba(74,222,128,0.65)" stroke="#86EFAC" />
             </g>
 
             {/* Growth Area Curve */}
@@ -120,8 +120,8 @@ export default function HeroIllustration() {
               { cx: 464, cy: 98 },
             ].map((pt, idx) => (
               <g key={idx}>
-                <circle cx={pt.cx} cy={pt.cy} r="8" fill="#E11D2E" fillOpacity="0.3" />
-                <circle cx={pt.cx} cy={pt.cy} r="4.5" fill="#FFFFFF" stroke="#E11D2E" strokeWidth="2" />
+                <circle cx={pt.cx} cy={pt.cy} r="8" fill="#4ADE80" fillOpacity="0.3" />
+                <circle cx={pt.cx} cy={pt.cy} r="4.5" fill="#FFFFFF" stroke="#4ADE80" strokeWidth="2" />
               </g>
             ))}
           </svg>
@@ -141,7 +141,7 @@ export default function HeroIllustration() {
                 key={i}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-white/95 backdrop-blur-md"
                 style={{
-                  background: i === 0 ? 'rgba(225,29,46,0.88)' : 'rgba(255,255,255,0.14)',
+                  background: i === 0 ? 'rgba(74,222,128,0.88)' : 'rgba(255,255,255,0.14)',
                   border: '1px solid rgba(255,255,255,0.2)',
                 }}
               >
@@ -157,13 +157,13 @@ export default function HeroIllustration() {
           <div
             className="flex items-center gap-3 p-3 rounded-xl"
             style={{
-              background: isLight ? 'rgba(225,29,46,0.04)' : 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(225,29,46,0.18)',
+              background: isLight ? 'rgba(74,222,128,0.04)' : 'rgba(255,255,255,0.03)',
+              border: '1px solid rgba(74,222,128,0.18)',
             }}
           >
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-              style={{ background: 'rgba(225,29,46,0.14)', color: 'var(--red-bright)' }}
+              style={{ background: 'rgba(74,222,128,0.14)', color: 'var(--red-bright)' }}
             >
               <ChartLineUp size={21} weight="duotone" />
             </div>

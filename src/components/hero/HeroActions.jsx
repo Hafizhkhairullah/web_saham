@@ -7,11 +7,11 @@ export default function HeroActions() {
   const navigate = useNavigate()
 
   const handlePrimary = () => {
-    const portfolioEl = document.getElementById('portofolio')
-    if (portfolioEl) {
-      portfolioEl.scrollIntoView({ behavior: 'smooth' })
+    const servicesEl = document.getElementById('layanan')
+    if (servicesEl) {
+      servicesEl.scrollIntoView({ behavior: 'smooth' })
     } else {
-      navigate('/#portofolio')
+      navigate('/#layanan')
     }
   }
 

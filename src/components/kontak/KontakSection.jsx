@@ -27,7 +27,7 @@ export default function KontakSection() {
       <div
         className="absolute inset-0 z-0 opacity-30"
         style={{
-          background: 'radial-gradient(ellipse at 50% 50%, rgba(225,29,46,0.15) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse at 50% 50%, rgba(74,222,128,0.15) 0%, transparent 60%)',
         }}
       />
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, var(--border-subtle), transparent)' }} />
